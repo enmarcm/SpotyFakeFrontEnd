@@ -120,6 +120,7 @@ export class MusicPlayerService {
     const currentTrack = this.tracks[this.currentTrackIndex];
     if(currentTrack.url_song){
       this.play(currentTrack.url_song); // Assuming eatrack has a [`url`
+      
     }else{
       this.play(currentTrack.urlSong)
       console.log('current artists', currentTrack.artistNames)

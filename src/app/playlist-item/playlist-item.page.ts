@@ -73,7 +73,7 @@ export class PlaylistItemPage implements OnInit {
         this.PlaylistItem.id
       );
       
-      console.log('response', response);
+      console.log('response of playlist', response);
       this.PlaylistItem = response;
     } catch (error) {
       // this.presentToastSuccess('bottom');

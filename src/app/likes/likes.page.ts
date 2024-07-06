@@ -25,6 +25,8 @@ import { addIcons } from 'ionicons';
 import { addCircleOutline } from 'ionicons/icons';
 import { BASE_IMAGE_LIKES } from 'src/constants';
 import { PlayButtomComponent } from '../play-buttom/play-buttom.component';
+import { MusicPlayerService } from '../services/music-player.service';
+import { SharedDataService } from '../services/shared-data.service';
 
 @Component({
   selector: 'app-likes',
@@ -58,7 +60,9 @@ export class LikesPage implements OnInit {
 
   constructor(
     private songSearchService: SongSearchService,
-    private router: Router
+    private router: Router,
+    private musicPlayerService: MusicPlayerService,
+    private sharedDataService: SharedDataService
   ) {
     addIcons({ addCircleOutline });
   }
@@ -69,6 +73,7 @@ export class LikesPage implements OnInit {
     try {
       const response = await this.songSearchService.getAllLikes();
       this.songs = response;
+      console.log('response', response);
     } catch (error) {
       console.error(error);
       this.router.navigate(['/tabs']);
@@ -77,5 +82,13 @@ export class LikesPage implements OnInit {
 
   async goToSong(idSong: string) {
     this.router.navigate([`/song`, idSong]);
+  }
+
+  async playLikes() {
+    this.musicPlayerService.setPlaylist(this.songs);
+    this.musicPlayerService.play(this.songs[0].urlSong);
+    this.sharedDataService.changeArtistsOut(this.songs[0].artistNames);
+    this.sharedDataService.changeSongName(this.songs[0].name);
+    this.sharedDataService.changeTrackPhoto(this.songs[0].urlImage);
   }
 }
