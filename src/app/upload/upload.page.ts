@@ -88,6 +88,7 @@ export class UploadPage implements OnInit {
 
   async uploadFileImage(): Promise<void> {
     try {
+      alert('Cargando archivo de imagen...');
       if (this.selectedFileImage) {
         try {
           const url = await this.uploadService
@@ -96,17 +97,20 @@ export class UploadPage implements OnInit {
           console.log('File uploaded! URL:', url);
           if (!url) throw new Error('Error uploading file');
           this.urlImage = url;
+          alert('Archivo de imagen cargado correctamente');
         } catch (error) {
           console.error('Error uploading file:', error);
         }
       }
     } catch (error) {
+      alert('Error al cargar el archivo de imagen');
       console.error('Error uploading file:', error);
     }
   }
 
   async uploadFileSong(): Promise<void> {
     if (this.selectedFileSong) {
+      alert('Cargando archivo de canción...');
       console.log('Cargando archivo de canción...');
       try {
         const url = await this.uploadService
@@ -115,7 +119,9 @@ export class UploadPage implements OnInit {
         console.log('File uploaded! URL:', url);
         if (!url) throw new Error('Error uploading file');
         this.urlSong = url;
+        alert('Archivo de canción cargado correctamente');
       } catch (error) {
+        alert('Error al cargar el archivo de canción');
         console.error('Error uploading file:', error);
       }
     }
@@ -157,6 +163,7 @@ export class UploadPage implements OnInit {
 
       const result = await this.searchSongService.uploadSong(song);
 
+      alert(`Nombre de la canción: ${this.songName}`);
       if (result?.error) throw new Error(result.error);
 
       this.router.navigate(['/tabs/home']);

@@ -17,11 +17,10 @@ import { LoaderComponent } from './loader/loader.component';
 export class AppComponent implements OnInit, OnDestroy {
   isLoading: Observable<boolean>;
   public realLoading: boolean = false;
-
-
   shouldRenderMenu: boolean;
-  selectedSongUrl: string= "";
+  selectedSongUrl: string = "";
   private routerSubscription: Subscription = new Subscription();
+  private storageListener: (event: StorageEvent) => void;
 
   constructor(private router: Router, private loaderService: LoaderService) {
     this.shouldRenderMenu = ![
@@ -32,11 +31,17 @@ export class AppComponent implements OnInit, OnDestroy {
       '/main',
     ].includes(this.router.url);
     this.isLoading = this.loaderService.loading$;
-    
+
     this.isLoading.subscribe((loading) => {
       console.log('isLoading:', loading);
       this.realLoading = loading;
     });
+
+    this.storageListener = (event: StorageEvent) => {
+      if (event.key === 'token' && event.newValue === null) {
+        this.clearData();
+      }
+    };
   }
 
   ngOnInit() {
@@ -46,12 +51,15 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.updateMenuVisibility();
       });
+
+    window.addEventListener('storage', this.storageListener);
   }
 
   ngOnDestroy() {
     if (this.routerSubscription) {
       this.routerSubscription.unsubscribe();
     }
+    window.removeEventListener('storage', this.storageListener);
   }
 
   selectSong(url: string) {
@@ -70,4 +78,12 @@ export class AppComponent implements OnInit, OnDestroy {
     console.log(this.router.url, this.shouldRenderMenu);
   }
 
+  private clearData() {
+    // Clear all data from memory
+    this.selectedSongUrl = "";
+    this.realLoading = false;
+    this.shouldRenderMenu = false;
+    // Add any other data you need to clear
+    console.log('Data cleared due to token removal');
+  }
 }

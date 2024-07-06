@@ -47,15 +47,18 @@ export class LoginPage implements OnInit {
   async login() {
     try {
       this.loaderService.show();
+      alert('Iniciando sesion')
       const result = (await this.loginService.sendLoginRequest(
         this.username,
         this.password
       )) as any;
       localStorage.setItem('token', result.token);
       this.router.navigate(['/tabs']);
+      alert('Sesion iniciada')
       return;
     } catch (error) {
       console.error('Error al iniciar sesion', error);
+      alert('Error al iniciar sesion')
     } finally {
       this.loaderService.hide();
     }

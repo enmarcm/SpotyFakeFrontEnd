@@ -147,7 +147,9 @@ export class PlaylistsPage implements OnInit {
         throw response.error;
       }
 
+      alert('Playlist eliminada')
       this.playlists = await this.songSearchService.getPlaylists();
+
     } catch (error) {
       console.error(`Ocurrio un error`, error);
     }

@@ -26,7 +26,10 @@ export class MusicPlayerService {
   constructor(
     private sharedDataService: SharedDataService,
     // private loadingController: LoadingController
-  ) {}
+  ) {
+    this.overrideLocalStorageMethods();
+    this.listenForTokenRemoval();
+  }
 
   async setPlaylist(tracks: any[]) {
     this.tracks = tracks;
@@ -60,7 +63,6 @@ export class MusicPlayerService {
       // await this.dismissLoading();
     }
   }
-
 
   private async loadAudio() {
     return new Promise((resolve, reject) => {
@@ -149,9 +151,51 @@ export class MusicPlayerService {
     }
   }
 
-    getNextTrack() {
+  getNextTrack() {
     const nextIndex = (this.currentTrackIndex + 1) % this.tracks.length;
     return this.tracks[nextIndex];
   }
-}
 
+  resetPlayer() {
+    this.audio.pause();
+    this.audio.currentTime = 0;
+    this.audio.src = '';
+    this.isPlaying = false;
+    this.playStatus.next(this.isPlaying);
+    this.currentTimeSource.next(0);
+    this.durationSource.next(0);
+    this.songUrlSource.next(null);
+    this.currentTrackSource.next(null);
+    this.tracks = [];
+    this.currentTrackIndex = 0;
+  }
+
+  private overrideLocalStorageMethods() {
+    const originalSetItem = localStorage.setItem;
+    const originalRemoveItem = localStorage.removeItem;
+
+    localStorage.setItem = function(key, value) {
+      const event = new Event('storageChange') as any;
+      event['key'] = key;
+      event['newValue'] = value;
+      window.dispatchEvent(event);
+      originalSetItem.apply(this, arguments as any);
+    };
+
+    localStorage.removeItem = function(key) {
+      const event = new Event('storageChange') as any;
+      event['key'] = key;
+      event['newValue'] = null;
+      window.dispatchEvent(event);
+      originalRemoveItem.apply(this, arguments as any);
+    };
+  }
+
+  private listenForTokenRemoval() {
+    window.addEventListener('storageChange', (event: any) => {
+      if (event.key === 'token' && event.newValue === null) {
+        this.resetPlayer();
+      }
+    });
+  }
+}

@@ -18,6 +18,7 @@ export class LogoutPage implements OnInit {
 
   ngOnInit() {
     localStorage.removeItem('token');
+    this.seconds = 10;
 
     const intervalId = setInterval(() => {
       if (this.seconds === 0) {

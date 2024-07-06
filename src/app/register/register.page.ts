@@ -77,8 +77,11 @@ export class RegisterPage implements OnInit {
       if (!result || result?.error) {
         throw new Error(`Ocurrio un error al registrarse. ${result?.error}`);
       }
+
+      alert('Vaya a su correo para activar la cuenta')
     } catch (error: any) {
       console.error(`Error al registrarse ${error.error.error}`);
+      alert(`Error al registrarse ${error.error.error}`);
     } finally {
     }
   };

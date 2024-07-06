@@ -50,9 +50,9 @@
 
           <ion-card-content>
             <ion-list>
-              @for(song of songs; track song._id){
+              @for(song of songs; track song.id){
               <ion-item
-                [id]="song._id"
+                [id]="song.id"
                 class="flex items-center justify-start flex-col"
                 (click)="goToSong(song.id)"
               >

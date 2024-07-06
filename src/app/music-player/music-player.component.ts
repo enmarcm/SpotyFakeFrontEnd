@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { play, pause } from 'ionicons/icons';
+import { play, pause, caretForwardOutline, caretBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { JoinArtistsPipe } from '../services/joinArtists';
 import { MusicPlayerService } from '../services/music-player.service';
@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common';
 import { PlayButtomComponent } from '../play-buttom/play-buttom.component';
 import { SharedDataService } from '../services/shared-data.service';
 import { FormsModule } from '@angular/forms';
-import { ModalPlayerComponent } from '../modal-player/modal-player.component';
 import {ModalController} from '@ionic/angular';
 import { IonFooter, IonToolbar, IonButtons, IonButton, IonIcon, IonModal, IonHeader, IonTitle, IonContent } from "@ionic/angular/standalone";
+import getDominantColorHex from 'src/utils/getColorFromUrl';
 
 interface ArtistInterface {
   id: string;
@@ -55,17 +55,19 @@ export class MusicPlayerComponent implements OnInit {
   currentTrack: any;
   isAlbum: boolean; // Add this property
   // currentSong: string; // Add this property
+
   nextTrack: { name: string };
   constructor(
     private musicPlayerService: MusicPlayerService,
     private sharedDataService: SharedDataService,
     public modalController: ModalController
   ) {
-    addIcons({ play, pause });
+    addIcons({ play, pause, caretForwardOutline, caretBackOutline });
      this.nextTrack = { name: '' };
     this.isAlbum = false; // Initialize this property
     // this.currentSong = {name: ""}; // Initialize this property
     this.currentTrack = { name: '' }; // Initialize this property
+    
   }
   
   isShow() {
@@ -75,6 +77,18 @@ export class MusicPlayerComponent implements OnInit {
   }
   
   ngOnInit() {
+
+    this.checkTokenAndReset();
+
+    window.addEventListener('storage', (event) => {
+      if (event.key === 'token' && event.newValue === null) {
+        this.resetPlayer();
+      }
+    });
+
+
+    getDominantColorHex(this.urlImage).then((color: any)=>this.dominantColor = color.toString())
+
     this.nextTrack = this.musicPlayerService.getNextTrack();
     this.musicPlayerService.songUrl$.subscribe((url) => {
       if (!url || url === null) return;
@@ -134,6 +148,9 @@ export class MusicPlayerComponent implements OnInit {
   }
 
   
+  getGradientStyle(color: string): string {
+    return `linear-gradient(to bottom, ${color} -40%, black 40%)`;
+  }
 
   pause() {
     this.musicPlayerService.pause();
@@ -187,6 +204,38 @@ export class MusicPlayerComponent implements OnInit {
   previousSong() {
     // Decrement the song index or loop to the end
     this.musicPlayerService.playPrevious();
+  }
+
+  checkTokenAndReset() {
+    if (!localStorage.getItem('token')) {
+      this.resetPlayer();
+    }
+  }
+
+  resetPlayer() {
+    // Reset to initial values
+    this.isPlaying = false;
+    this.songUrl = '';
+    this.idSong = '';
+    this.name = '';
+    this.duration = 0;
+    this.artists = [];
+    this.artistsOut = [];
+    this.album = {
+      name: '',
+      urlImage: '',
+      id: ''
+    };
+    this.date = '';
+    this.urlImage = '';
+    this.urlSong = '';
+    this.dominantColor = '';
+    this.formattedDuration = '';
+    this.currentAudioPosition = 0;
+    this.showArtistsOut = false;
+    this.currentTrack = '';
+    this.isAlbum = false;
+    this.nextTrack = { name: '' };
   }
 
 }
