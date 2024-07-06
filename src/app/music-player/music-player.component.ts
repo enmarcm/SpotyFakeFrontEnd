@@ -82,6 +82,7 @@ export class MusicPlayerComponent implements OnInit {
       const audio = this.musicPlayerService.audio;
       audio.addEventListener('timeupdate', this.updateProgressBar, false);
       audio.addEventListener('timeupdate', this.updateProgressBarModal, false);
+      audio.addEventListener('ended', this.checkProgressBar, false);
     });
     this.musicPlayerService.playStatus$.subscribe((status) => {
       this.isPlaying = status;
@@ -165,6 +166,14 @@ export class MusicPlayerComponent implements OnInit {
       progressBar.value = percentage;
     } else if (progressBar) {
       progressBar.value = 0; // Set to 0 or a sensible default if conditions are not met
+    }
+  }
+
+  checkProgressBar = () => {
+    const progressBar = document.getElementById('audioProgress') as HTMLProgressElement;
+    if (progressBar) {
+      progressBar.value == 100;
+      this.nextSong();
     }
   }
 
