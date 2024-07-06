@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { addCircleOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { TypeaheadComponent } from '../typehead/typehead.component';
-import { BASE_IMAGE_DEFAULT } from 'src/constants';
+import { BASE_IMAGE_DEFAULT, BASE_IMAGE_LIKES } from 'src/constants';
 import {
   IonHeader,
   IonToolbar,
@@ -72,6 +72,7 @@ import {
 export class PlaylistsPage implements OnInit {
   public playlists: Array<Playlist> = [];
   public imageBase = BASE_IMAGE_DEFAULT;
+  public imageBaseLikes = BASE_IMAGE_LIKES;
 
   constructor(
     private songSearchService: SongSearchService,
@@ -209,7 +210,9 @@ export class PlaylistsPage implements OnInit {
     this.isModalOptions = false;
   }
 
-  goToLikes() {}
+  goToLikes() {
+    this.router.navigate(['/likes']);
+  }
 }
 
 interface Playlist {

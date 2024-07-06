@@ -19,7 +19,11 @@ import {
   IonCardTitle,
   IonCardSubtitle,
   IonCardHeader,
+  IonIcon,
+  IonButton,
 } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { heartDislikeOutline, heartOutline } from 'ionicons/icons';
 
 interface ArtistInterface {
   id: string;
@@ -35,6 +39,8 @@ interface ArtistInterface {
   styleUrls: ['./song.page.scss'],
   standalone: true,
   imports: [
+    IonButton,
+    IonIcon,
     IonCardHeader,
     IonCardSubtitle,
     IonCardTitle,
@@ -69,6 +75,7 @@ export class SongPage implements OnInit {
   public urlSong: string = '';
   public dominantColor: string = '';
   public formattedDuration = '';
+  public isLiked: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -76,6 +83,7 @@ export class SongPage implements OnInit {
     private sharedDataService: SharedDataService
   ) {
     this.idSong = this.activatedRoute.snapshot.paramMap.get('idSong') || '';
+    addIcons({ heartOutline, heartDislikeOutline });
   }
 
   async ngOnInit() {
@@ -90,8 +98,9 @@ export class SongPage implements OnInit {
       this.date = response.date;
       this.urlImage = response.urlImage;
       this.urlSong = response.url_song;
+      this.isLiked = response.isLiked;
 
-      this.duration = Number(response.duration_ms);
+      this.duration = Number(response.duration_ms) || response.duration;
 
       const minutes = Math.floor(this.duration / 60000);
       const seconds = Math.floor((this.duration % 60000) / 1000);
@@ -102,6 +111,19 @@ export class SongPage implements OnInit {
     } catch (error) {
       console.error(error);
       this.router.navigate(['/tabs']);
+    }
+  }
+
+  async toggleLike() {
+    try {
+      const result = await this.songSearchService.toggleLike(this.idSong);
+
+      if(result?.message){
+        this.isLiked = !this.isLiked;
+      }
+      this.router.navigate(['/song', this.idSong]);
+    } catch (error) {
+      console.error(error);
     }
   }
 

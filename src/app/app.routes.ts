@@ -56,6 +56,10 @@ export const routes: Routes = [
     redirectTo: "/tabs/playlists"
   },
   {
+    path: 'likes',
+    redirectTo: "/tabs/playlists/likes"
+  },
+  {
     path: 'register',
     loadComponent: () => import('./register/register.page').then( m => m.RegisterPage)
   },
@@ -71,5 +75,7 @@ export const routes: Routes = [
     path: 'profile',
     loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
   },
+  
+
   
 ];

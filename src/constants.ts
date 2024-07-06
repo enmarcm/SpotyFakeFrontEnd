@@ -22,6 +22,10 @@ export enum URL_REQUEST{
     UPDATE_DATA_USER = `${BASE_URL}/profile/update`,
     DELETE_USER = `${BASE_URL}/profile/delete`,
     UPLOAD_SONG = `${BASE_URL}/songs/add`,
+    TOGGLE_LIKE = `${BASE_URL}/likes/toggleLike`,
+    GET_LIKES = `${BASE_URL}/likes/getLikeByUser`,
 }
 
 export const BASE_IMAGE_DEFAULT = "https://img.freepik.com/vector-gratis/gradiente-azul-rosa_78370-260.jpg"
+
+export const BASE_IMAGE_LIKES = `https://img.freepik.com/premium-photo/black-minimalist-wallpaper_889056-13077.jpg`

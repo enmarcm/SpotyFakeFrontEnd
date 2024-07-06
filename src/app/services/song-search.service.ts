@@ -168,4 +168,18 @@ export class SongSearchService {
       this.loaderService.hide();
     }
   }
+
+  toggleLike(idSong: string): Promise<any> {
+    const myToken = localStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization: `${myToken}` });
+    return this.makeRequest(`${URL_REQUEST.TOGGLE_LIKE}/${idSong}`, {
+      headers,
+    });
+  }
+
+  getAllLikes(): Promise<any> {
+    const myToken = localStorage.getItem('token');
+    const headers = new HttpHeaders({ Authorization: `${myToken}` });
+    return this.makeRequest(URL_REQUEST.GET_LIKES, { headers });
+  }
 }

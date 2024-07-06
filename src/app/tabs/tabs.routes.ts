@@ -57,6 +57,11 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'playlists/likes',
+        loadComponent: () =>
+          import('../likes/likes.page').then((m) => m.LikesPage),
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full',

@@ -22,7 +22,7 @@
       </ion-row>
 
       <ion-row class="h-[20%] px-2">
-        <ion-col size="8" class="flex justify-start items-start flex-col">
+        <ion-col size="7" class="flex justify-start items-start flex-col">
           <h2 class="font-black font-white text-2xl text-start my-2">
             {{name.toLowerCase()}}
           </h2>
@@ -38,8 +38,16 @@
           </div>
         </ion-col>
 
-        <ion-col size="4" class="flex justify-end items-center">
-          <play-buttom [songUrl]="urlSong" (click)="updateSharedData()"/>
+        <ion-col size="5" class="flex justify-end items-center">
+          <div class="w-2/5">
+            <ion-button fill="clear" (click)="toggleLike()">
+              <ion-icon
+                color="dark"
+                name="{{ isLiked ? 'heart-dislike-outline' : 'heart-outline' }}"
+              ></ion-icon>
+            </ion-button>
+          </div>
+          <play-buttom [songUrl]="urlSong" (click)="updateSharedData()" />
         </ion-col>
       </ion-row>
 
@@ -89,36 +97,35 @@
       <ion-row class="px-2">
         <div class="flex gap-2 items-start">
           @for(artist of artists; track artist.id; let index= $index){
+          @if(artists.length === 1){
+          <ion-col size="10" (click)="goToArtist(artist.id)">
+            <ion-card class="w-36 h-max">
+              <img [src]="artist.urlImage" class="w-36 h-36 object-fill" />
 
-            @if(artists.length === 1){
-              <ion-col size="10" (click)="goToArtist(artist.id)">
-                <ion-card class="w-36 h-max">
-                  <img [src]="artist.urlImage" class="w-36 h-36 object-fill"
-                   />
-    
-                  <ion-card-header>
-                    <ion-card-title>{{artist.name}}</ion-card-title>
-    
-                    <ion-card-subtitle>Seguidores: {{artist.followers}}</ion-card-subtitle>
-                  </ion-card-header>
-                </ion-card>
-              </ion-col>
-            }@else{
-              <ion-col size="6" (click)="goToArtist(artist.id)">
-                <ion-card class="w-36 h-max">
-                  <img [src]="artist.urlImage" class="w-36 h-36 object-fill" />
-    
-                  <ion-card-header>
-                    <ion-card-title>{{artist.name}}</ion-card-title>
-    
-                    <ion-card-subtitle>Seguidores: {{artist.followers}}</ion-card-subtitle>
-                  </ion-card-header>
-                </ion-card>
-              </ion-col>
-            }
-            
-          
-          }
+              <ion-card-header>
+                <ion-card-title>{{artist.name}}</ion-card-title>
+
+                <ion-card-subtitle
+                  >Seguidores: {{artist.followers}}</ion-card-subtitle
+                >
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+          }@else{
+          <ion-col size="6" (click)="goToArtist(artist.id)">
+            <ion-card class="w-36 h-max">
+              <img [src]="artist.urlImage" class="w-36 h-36 object-fill" />
+
+              <ion-card-header>
+                <ion-card-title>{{artist.name}}</ion-card-title>
+
+                <ion-card-subtitle
+                  >Seguidores: {{artist.followers}}</ion-card-subtitle
+                >
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+          } }
         </div>
       </ion-row>
     </ion-grid>

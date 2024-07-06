@@ -28,11 +28,14 @@
 
       <!-- LIKES -> Esto es estatico -->
       <ion-row class="my-3">
-        <ion-card class="flex w-full py-2 px-4" (click)="goToLikes()">
+        <ion-card
+          class="flex w-full p-4 hover:opacity-85 hover:cursor-pointer"
+          (click)="goToLikes()"
+        >
           <div class="w-16 flex justify-center items-center">
             <ion-img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/card-media.png"
+              [src]="imageBaseLikes"
               class="w-full h-full aspect-1 object-cover rounded-lg"
             />
           </div>
@@ -131,7 +134,6 @@
                 color="success"
                 [(ngModel)]="newPlaylist.playListname"
                 name="playListname"
-                
               ></ion-input>
             </ion-col>
           </ion-row>
