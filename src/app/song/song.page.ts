@@ -4,10 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SongSearchService } from '../services/song-search.service';
 import getDominantColorHex from 'src/utils/getColorFromUrl';
-// import { LoadingController, ToastController } from '@ionic/angular';
 import { PlayButtomComponent } from '../play-buttom/play-buttom.component';
 import { SharedDataService } from '../services/shared-data.service';
-import { IonHeader, IonContent, IonTitle, IonToolbar, IonRow, IonGrid, IonCol, IonImg, IonCard, IonCardTitle, IonCardSubtitle, IonCardHeader } from "@ionic/angular/standalone";
+import {
+  IonHeader,
+  IonContent,
+  IonTitle,
+  IonToolbar,
+  IonRow,
+  IonGrid,
+  IonCol,
+  IonImg,
+  IonCard,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonCardHeader,
+  IonIcon,
+  IonButton,
+} from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { heartDislikeOutline, heartOutline } from 'ionicons/icons';
 
 interface ArtistInterface {
   id: string;
@@ -22,7 +38,25 @@ interface ArtistInterface {
   templateUrl: './song.page.html',
   styleUrls: ['./song.page.scss'],
   standalone: true,
-  imports: [IonCardHeader, IonCardSubtitle, IonCardTitle, IonCard, IonImg, IonCol, IonGrid, IonRow, IonToolbar, IonTitle, IonContent, IonHeader,  CommonModule, FormsModule, PlayButtomComponent],
+  imports: [
+    IonButton,
+    IonIcon,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCard,
+    IonImg,
+    IonCol,
+    IonGrid,
+    IonRow,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonHeader,
+    CommonModule,
+    FormsModule,
+    PlayButtomComponent,
+  ],
 })
 export class SongPage implements OnInit {
   songSearchService = inject(SongSearchService);
@@ -41,22 +75,21 @@ export class SongPage implements OnInit {
   public urlSong: string = '';
   public dominantColor: string = '';
   public formattedDuration = '';
+  public isLiked: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    // public loadingController: LoadingController,
-    // public toastController: ToastController,
     private router: Router,
     private sharedDataService: SharedDataService
   ) {
     this.idSong = this.activatedRoute.snapshot.paramMap.get('idSong') || '';
+    addIcons({ heartOutline, heartDislikeOutline });
   }
 
   async ngOnInit() {
     try {
-      // await this.presentLoading();
       const response = await this.songSearchService.getSong(this.idSong);
-      console.log('response', response);
+
       this.dominantColor = await getDominantColorHex(response.album.urlImage);
       this.idSong = response.id;
       this.name = response.name;
@@ -65,8 +98,9 @@ export class SongPage implements OnInit {
       this.date = response.date;
       this.urlImage = response.urlImage;
       this.urlSong = response.url_song;
-  
-      this.duration = Number(response.duration_ms);
+      this.isLiked = response.isLiked;
+
+      this.duration = Number(response.duration_ms) || response.duration;
 
       const minutes = Math.floor(this.duration / 60000);
       const seconds = Math.floor((this.duration % 60000) / 1000);
@@ -77,8 +111,19 @@ export class SongPage implements OnInit {
     } catch (error) {
       console.error(error);
       this.router.navigate(['/tabs']);
-    } finally {
-      // this.dismissLoading();
+    }
+  }
+
+  async toggleLike() {
+    try {
+      const result = await this.songSearchService.toggleLike(this.idSong);
+
+      if(result?.message){
+        this.isLiked = !this.isLiked;
+      }
+      this.router.navigate(['/song', this.idSong]);
+    } catch (error) {
+      console.error(error);
     }
   }
 
@@ -96,46 +141,6 @@ export class SongPage implements OnInit {
   getGradientStyle(color: string): string {
     return `linear-gradient(to bottom, ${color} -40%, black 40%)`;
   }
-
-  // async presentLoading() {
-  //   const loading = await this.loadingController.create({
-  //     translucent: false,
-  //     animated: true,
-  //     spinner: 'bubbles',
-  //     cssClass: 'custom-loader-songs',
-  //   });
-
-  //   return await loading.present();
-  // }
-
-  // async dismissLoading() {
-  //   return await this.loadingController.dismiss();
-  // }
-
-  // async presentToastSuccess(position: 'top' | 'middle' | 'bottom' = 'bottom') {
-  //   const toast = await this.toastController.create({
-  //     message: `Se obtuvo la canción ${this.name}!`,
-  //     duration: 1500,
-  //     position: position,
-  //     color: 'success',
-  //   });
-
-  //   await toast.present();
-  // }
-
-  // async presentToastError(
-  //   position: 'top' | 'middle' | 'bottom' = 'bottom',
-  //   error: any
-  // ) {
-  //   const toast = await this.toastController.create({
-  //     message: 'Error al cargar la canción',
-  //     duration: 1500,
-  //     position: position,
-  //     color: 'danger',
-  //   });
-
-  //   await toast.present();
-  // }
 
   imageSize = 200;
 
