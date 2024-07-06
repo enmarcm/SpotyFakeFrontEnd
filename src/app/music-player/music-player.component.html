@@ -1,74 +1,99 @@
 @if(isShow()){
-<ion-footer
-  class="w-[95%] flex justify-center rounded-md shadow-lg mx-auto opacity-85"
->
-  <ion-toolbar>
-    <!-- <div class="progress-container" style="width: 100%; background-color: #eee;"> -->
-    <!-- <ion-range min="0" [max]="duration" [(ngModel)]="currentAudioPosition" (ionChange)="changeCurrentTime($event)">
-          <ion-icon size="small" slot="start" name="musical-notes"></ion-icon>
-          <ion-icon slot="end" name="musical-note"></ion-icon>
-        </ion-range> -->
-    <!-- </div> -->
-    <div class="flex items-center justify-between w-full p-2">
-      <div class="flex-shrink-0">
-        <ion-buttons slot="start">
-          <ion-button (click)="togglePlayPause()">
-            <ion-icon
-              [name]="isPlaying ? 'pause' : 'play'"
-              style="color: aliceblue"
-            ></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </div>
-      <div class="flex items-center justify-start flex-grow" (click)="OpenModal(true)">
-        <img [src]="urlImage" class="h-12 w-12 rounded-full mr-2" />
-        <div class="flex flex-col">
-          <span class="text-sm truncate">Now Playing: {{ name }}</span>
-          <span class="text-xs truncate"
-            >Artists: {{ artists | joinArtists }}</span>
+  <ion-footer
+    class="w-[95%] flex justify-center rounded-md shadow-lg mx-auto opacity-85"
+  >
+    <ion-toolbar>
+      <!-- <div class="progress-container" style="width: 100%; background-color: #eee;"> -->
+      <!-- <ion-range min="0" [max]="duration" [(ngModel)]="currentAudioPosition" (ionChange)="changeCurrentTime($event)">
+            <ion-icon size="small" slot="start" name="musical-notes"></ion-icon>
+            <ion-icon slot="end" name="musical-note"></ion-icon>
+          </ion-range> -->
+      <!-- </div> -->
+      <div class="flex items-center justify-between w-full p-2">
+        <div class="flex-shrink-0">
+          <ion-buttons slot="start">
+            <ion-button (click)="togglePlayPause()">
+              <ion-icon
+                [name]="isPlaying ? 'pause' : 'play'"
+                style="color: aliceblue"
+              ></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+        <div class="flex items-center justify-start flex-grow" (click)="OpenModal(true)">
+          <img [src]="urlImage" class="h-12 w-12 rounded-full mr-2" />
+          <div class="flex flex-col">
+            <span *ngIf="!isAlbum">{{ name }}</span>
+            <span *ngIf="isAlbum">{{ currentTrack.name }}</span>
+            <span class="text-lg truncate">
+              By 
+              <ng-container *ngIf="!showArtistsOut">
+                {{ artists | joinArtists }}
+              </ng-container>
+              <ng-container *ngIf="showArtistsOut">
+                <ng-container *ngFor="let artist of artistsOut; let isLast = last">
+                  {{ artist }}<span *ngIf="!isLast">, </span>
+                </ng-container>
+              </ng-container>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <ion-modal [isOpen]="isModalOpen">
-      <ng-template>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Modal</ion-title>
-            <ion-buttons slot="end">
-              <ion-button (click)="CloseModal()">Close</ion-button>
-            </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
-          <div class="flex flex-col items-center justify-center">
-            <!-- Centered and larger image -->
-            <img [src]="urlImage" class="h-48 w-48 rounded-full mb-4" />
-            <!-- Centered text for song name and artist names -->
-            <div class="text-center">
-              <span class="text-xl font-bold truncate">{{ name }}</span><br>
-              <span class="text-lg truncate">By {{ artists | joinArtists }}</span>
-            </div>
-
-            <div class="progress-container w-full mt-4">
-              <progress value="0" max="100" id="audioProgressModal" class="w-full"></progress>
-            </div>
-            <!-- Buttons for Next and Previous Song -->
-            <div class="flex justify-between w-full mt-4">
-              <ion-button (click)="previousSong()">Previous</ion-button>
-              <ion-button (click)="nextSong()">Next</ion-button>
-            </div>
-            
-          </div>
-        </ion-content>
-      </ng-template>
-    </ion-modal>
-    <div class="progress-container">
-      <progress value="0" max="100" id="audioProgress"></progress>
-    </div>
-  </ion-toolbar>
   
-</ion-footer>
-}@else{
-<div></div>
-}
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Modal</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="CloseModal()">Close</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <div class="flex flex-col items-center justify-center">
+              <!-- Centered and larger image -->
+              <img [src]="urlImage" class="h-48 w-48 rounded-full mb-4" />
+              <!-- Centered text for song name and artist names -->
+              <div class="text-center">
+                <span *ngIf="!isAlbum">{{ name }}</span><br>
+        <span *ngIf="isAlbum">{{ currentTrack.name }}</span><br>
+        <span class="text-lg truncate">
+          By 
+          <ng-container *ngIf="!showArtistsOut">
+            {{ artists | joinArtists }}
+          </ng-container>
+          <ng-container *ngIf="showArtistsOut">
+            <ng-container *ngFor="let artist of artistsOut; let isLast = last">
+              {{ artist }}<span *ngIf="!isLast">, </span>
+            </ng-container>
+          </ng-container>
+        </span>
+              </div>
+  
+              <div class="progress-container w-full mt-4">
+                <progress value="0" max="100" id="audioProgressModal" class="w-full"></progress>
+              </div>
+              <!-- Buttons for Next and Previous Song -->
+              <div class="flex justify-between w-full mt-4">
+                <ion-button (click)="previousSong()">Previous</ion-button>
+                <ion-button (click)="togglePlayPause()">Play/Pause</ion-button>
+                <ion-button (click)="nextSong()">Next</ion-button>
+              </div>
+              <div class="text-center mt-4">
+                <span *ngIf="currentTrack"class="text-sm">Next Track: {{ nextTrack.name }}</span>
+              </div>
+              
+            </div>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <div class="progress-container">
+        <progress value="0" max="100" id="audioProgress"></progress>
+      </div>
+    </ion-toolbar>
+    
+  </ion-footer>
+  }@else{
+  <div></div>
+  }

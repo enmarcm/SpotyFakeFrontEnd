@@ -1,6 +1,7 @@
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { LoaderService } from '../loader.service';
+import { SharedDataService } from './shared-data.service';
+// import { LoadingController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +17,29 @@ export class MusicPlayerService {
   duration$ = this.durationSource.asObservable();
   private songUrlSource = new BehaviorSubject<string | null>(null);
   public songUrl$ = this.songUrlSource.asObservable();
+  private tracks: any[] = []; // Replace `any` with your Track model
+  private currentTrackIndex = 0;
 
-  constructor() {}
-  public loaderService = inject(LoaderService)
+  private currentTrackSource = new BehaviorSubject<any | null>(null); // Replace `any` with your Track model
+  public currentTrack$ = this.currentTrackSource.asObservable();
+
+  constructor(
+    private sharedDataService: SharedDataService,
+    // private loadingController: LoadingController
+  ) {}
+
+  async setPlaylist(tracks: any[]) {
+    this.tracks = tracks;
+    console.log('Setting Playlist:', this.tracks); // Debugging line
+    this.currentTrackIndex = 0; // Optionally, start playing the first track
+    this.updateCurrentTrack();
+  }
+
+  private updateCurrentTrack(): void {
+    const currentTrack = this.tracks[this.currentTrackIndex];
+    console.log('Updating Current Track:', currentTrack); // Debugging line
+    this.currentTrackSource.next(currentTrack);
+  }
 
   async play(url: string) {
     this.songUrlSource.next(url);
@@ -30,19 +51,16 @@ export class MusicPlayerService {
   
     this.audio.src = url;
     // await this.presentLoading();
-    this.loaderService.show();
     try {
       await this.loadAudio(); 
       // await this.dismissLoading();
-      this.loaderService.hide();
       await this.startPlayback(); // Inicia la reproducción
     } catch (error) {
       console.error("Error during audio playback:", error);
       // await this.dismissLoading();
-      this.loaderService.hide();
-
     }
   }
+
 
   private async loadAudio() {
     return new Promise((resolve, reject) => {
@@ -75,7 +93,20 @@ export class MusicPlayerService {
     this.playStatus.next(this.isPlaying);
   }
 
- 
+  // async presentLoading() {
+  //   const loading = await this.loadingController.create({
+  //     translucent: false,
+  //     animated: true,
+  //     spinner: 'lines-sharp',
+  //     cssClass: 'custom-loader-songs',
+  //   });
+
+  //   return await loading.present();
+  // }
+
+  // async dismissLoading() {
+  //   return await this.loadingController.dismiss();
+  // }
 
   resume() {
     if (!this.isPlaying && this.audio.src) {
@@ -85,4 +116,41 @@ export class MusicPlayerService {
     }
   }
 
+  private playCurrentTrack(): void {
+    const currentTrack = this.tracks[this.currentTrackIndex];
+    if(currentTrack.url_song){
+      this.play(currentTrack.url_song); // Assuming eatrack has a [`url`
+    }else{
+      this.play(currentTrack.urlSong)
+      console.log('current artists', currentTrack.artistNames)
+      if(currentTrack.artistNames){
+        this.sharedDataService.changeArtistsOut(currentTrack.artistNames);
+      }else{
+        this.sharedDataService.changeArtists(currentTrack.artists)
+      }
+      this.sharedDataService.changeSongName(currentTrack.name);
+      this.sharedDataService.changeTrackPhoto(currentTrack.urlImage);
+    }
+  }
+  playNext(): void {
+    if (this.currentTrackIndex < this.tracks.length - 1) {
+      this.currentTrackIndex++;
+      this.updateCurrentTrack();
+      this.playCurrentTrack();
+    }
+  }
+
+  playPrevious(): void {
+    if (this.currentTrackIndex > 0) {
+      this.currentTrackIndex--;
+      this.updateCurrentTrack();
+      this.playCurrentTrack();
+    }
+  }
+
+    getNextTrack() {
+    const nextIndex = (this.currentTrackIndex + 1) % this.tracks.length;
+    return this.tracks[nextIndex];
+  }
 }
+

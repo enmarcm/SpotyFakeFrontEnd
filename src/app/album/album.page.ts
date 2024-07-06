@@ -23,6 +23,8 @@ import {
   IonThumbnail,
   IonLabel,
 } from '@ionic/angular/standalone';
+import { MusicPlayerService } from '../services/music-player.service';
+import { SharedDataService } from '../services/shared-data.service';
 
 @Component({
   selector: 'app-album',
@@ -63,7 +65,7 @@ export class AlbumPage implements OnInit {
   public songs: Array<any> = [];
   public dominantColor = '';
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private musicPlayerService: MusicPlayerService, private sharedDataService: SharedDataService) {
     this.idAlbum = this.activatedRoute.snapshot.paramMap.get('idAlbum') || '';
   }
 
@@ -93,5 +95,13 @@ export class AlbumPage implements OnInit {
 
   goToArtist(idArtist: string) {
     this.router.navigate(['/artist', idArtist]);
+  }
+
+  async playAlbum() {
+    this.musicPlayerService.setPlaylist(this.songs);
+    this.musicPlayerService.play(this.songs[0].url_song);
+      this.sharedDataService.changeSongName(this.songs[0].name);
+      this.sharedDataService.changeArtists(this.artists);
+      this.sharedDataService.changeTrackPhoto(this.urlImage);
   }
 }

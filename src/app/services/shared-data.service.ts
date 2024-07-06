@@ -24,12 +24,15 @@ export class SharedDataService {
   
   private artistsSource = new BehaviorSubject<ArtistInterface[]>([]);
   currentArtists = this.artistsSource.asObservable();
+
+  private artistsOutSource = new BehaviorSubject<any[]>([]);
+  currentArtistsOut = this.artistsOutSource.asObservable();
   
   constructor() { }
   
   changeUrlSong(url: string) {
     this.urlSongSource.next(url);
-    console.log(this.urlSongSource)
+    // console.log(this.urlSongSource)
   }
 
   changeSongName(name: string) {
@@ -40,7 +43,12 @@ export class SharedDataService {
     this.trackPhotoSource.next(photoUrl);
   }
 
-  changeArtists(artists: ArtistInterface[]) {
+  changeArtists(artists:ArtistInterface []) {
     this.artistsSource.next(artists);
+    console.log(this.artistsSource)
+  }
+
+  changeArtistsOut(artists: any[]) {
+    this.artistsOutSource.next(artists);
   }
 }
