@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>playList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class=" bg-gradient-to-b from-blue-400  to-black flex flex-col h-full py-6 px-2 w-full">
+
+    <ion-grid class="flex flex-col justify-start gap-2 py-6 min-h-screen w-full">
+      <ion-row class="h-1/3 min-h-56">
+        <ion-col size="12" class="flex justify-center items-center">
+          <div class="max-w-full w-64 h-64 aspect-1 object-cover">
+            <ion-img [src]="imageBase" class="h-64 w-64 object-cover aspect-1"/>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="h-[20%] px-2">
+        <ion-col size="8" class="flex justify-start items-start flex-col">
+          <h2 class="font-black font-white text-3xl text-start my-4">
+            {{PlaylistItem.name.toUpperCase()}}
+          </h2>
+
+          <h4 class=" text-sm text-gray-300 text-start">{{PlaylistItem.description.toLocaleLowerCase()}}
+          </h4>
+        </ion-col>
+
+        <ion-col size="4" class="flex justify-end items-center">
+          <play-buttom />
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="px-2">
+        <ion-col size="12">
+          <div class="flex flex-col gap-2 items-start justify-center h-full">
+            <div class="flex flex-col items-start justify-center gap-1 mb-10">
+              <h4 class="font-semibold text-sm text-gray-200">
+                Número de Canciones:
+                <span>{{PlaylistItem.idSongs.length}} </span>
+              </h4>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row >
+        <ion-card class="w-full">
+          <ion-card-header
+            ><ion-card-title>Canciones</ion-card-title></ion-card-header
+          >
+
+          <ion-card-content>
+            <ion-list>
+              @for(song of PlaylistItem.songs; track song.id){
+              <ion-item
+                [id]="song.id"
+                class="flex items-center justify-start flex-col"
+                (click)="goToSong(song.id)"
+              >
+                <ion-thumbnail slot="start">
+                  <img
+                    [src]="song.urlImage"
+                    class="object-cover rounded-md shadow-md"
+                  />
+                </ion-thumbnail>
+
+                <ion-label>{{song.name}}</ion-label>
+              </ion-item>
+              }
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

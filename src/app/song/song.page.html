@@ -1,0 +1,126 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>song</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" (ionScroll)="onScroll($event)">
+  <div
+    [class]="dominantColor"
+    [style.background]="getGradientStyle(dominantColor)"
+  >
+    <ion-grid class="min-h-screen">
+      <ion-row class="h-[30%] min-h-56">
+        <ion-col size="12" class="flex justify-center items-center">
+          <div
+            [ngStyle]="{'height': imageSize + 'px', 'width': imageSize + 'px'}"
+            class="flex justify-center items-center object-cover"
+          >
+            <ion-img [src]="urlImage" class="aspect-square shadow-lg"></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="h-[20%] px-2">
+        <ion-col size="8" class="flex justify-start items-start flex-col">
+          <h2 class="font-black font-white text-2xl text-start my-2">
+            {{name.toLowerCase()}}
+          </h2>
+
+          <div class="w-full">
+            @for(artist of artists; track artist.id){
+            <div class="flex">
+              <h3 class="font-semibold text-sm text-gray-200">
+                {{artist.name}}
+              </h3>
+            </div>
+            }
+          </div>
+        </ion-col>
+
+        <ion-col size="4" class="flex justify-end items-center">
+          <play-buttom [songUrl]="urlSong" (click)="updateSharedData()"/>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="mt-4 px-2 py-4">
+        <h3 class="text-start text-2xl text-bold">Información de la canción</h3>
+      </ion-row>
+
+      <ion-row class="px-2">
+        <ion-col size="8">
+          <div class="flex flex-col gap-2 items-start justify-center h-full">
+            <div class="flex flex-col items-start justify-center gap-1 mb-10">
+              <h4 class="font-semibold text-sm text-gray-200">
+                Duración: <span>{{formattedDuration}} </span>
+              </h4>
+
+              <h4 class="font-semibold text-sm text-gray-200">
+                Fecha de lanzamiento: <span>{{date}}</span>
+              </h4>
+            </div>
+          </div>
+        </ion-col>
+
+        <ion-col size="4">
+          <div class="flex flex-col gap-2 items-center justify-center">
+            <div class="flex flex-col gap-2 justify-center items-center">
+              <ion-img
+                [src]="album.urlImage"
+                class="h-28 w-28 aspect-square rounded-sm shadow-lg"
+              ></ion-img>
+
+              <div class="text-container-marquee">
+                <h3
+                  class="marquee-text font-semibold text-sm text-gray-200 text-center"
+                >
+                  {{album.name}}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="mt-4 px-2">
+        <h3 class="text-start text-2xl text-bold">Artistas de la canción</h3>
+      </ion-row>
+
+      <ion-row class="px-2">
+        <div class="flex gap-2 items-start">
+          @for(artist of artists; track artist.id; let index= $index){
+
+            @if(artists.length === 1){
+              <ion-col size="10" (click)="goToArtist(artist.id)">
+                <ion-card class="w-36 h-max">
+                  <img [src]="artist.urlImage" class="w-36 h-36 object-fill"
+                   />
+    
+                  <ion-card-header>
+                    <ion-card-title>{{artist.name}}</ion-card-title>
+    
+                    <ion-card-subtitle>Seguidores: {{artist.followers}}</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card>
+              </ion-col>
+            }@else{
+              <ion-col size="6" (click)="goToArtist(artist.id)">
+                <ion-card class="w-36 h-max">
+                  <img [src]="artist.urlImage" class="w-36 h-36 object-fill" />
+    
+                  <ion-card-header>
+                    <ion-card-title>{{artist.name}}</ion-card-title>
+    
+                    <ion-card-subtitle>Seguidores: {{artist.followers}}</ion-card-subtitle>
+                  </ion-card-header>
+                </ion-card>
+              </ion-col>
+            }
+            
+          
+          }
+        </div>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

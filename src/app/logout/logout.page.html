@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black h-full flex flex-col">
+    <ion-grid  class="min-h-screen flex flex-col justify-center items-center">
+      <ion-row class="h-[100%]">
+        <ion-col size="12" class="flex flex-col items-center justify-center gap-2">
+          <h1 class="text-4xl font-extrabold text-white mb-4">Cerraste sesión🥲</h1>
+
+          <h2 class="text-bold text-xl mt-1 text-center">
+            Te esperamos pronto nuevamente, aquí siempre estará tu música
+            favorita!
+          </h2>
+
+          <span class="text-gray-700 text-sm mb-2"
+            >En {{this.seconds}} segundos serás redirigo a la página principal.</span
+          >
+
+          <ion-button
+            [routerLink]="['/auth/login']"
+            shape="round"
+            fill="outline"
+            color="success"
+            class="mt-4"
+            (click)="isClicked = true"
+            >Ir a iniciar sesión</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

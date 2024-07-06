@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black">
+    <ion-grid [fixed]="true" class="h-screen">
+      <ion-row class="h-[40%] items-center justify-center">
+        <ion-col size="12" class="flex justify-center">
+          <ion-img
+            src="../../assets/spotify-icon.svg"
+            alt="icon of spotyfake"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row class="h-[30%]">
+        <ion-col size="12" class="flex justify-center">
+          <ion-text class="font-extrabold text-2xl text-center">
+            <h2>Millones de canciones.</h2>
+            <h2>
+            Gratis en Spoty<span class="text-green-400 text-bold">Fake</span>
+            </h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="h-[30%]">
+        <ion-col size="12" class="flex justify-center">
+          <div class="flex flex-col">
+            <ion-button shape="round" class="text-white font-bold" fill="outline" color="success" [routerLink]="['/auth/register']">Registrarte gratis</ion-button>
+            <ion-button class="text-white font-extrabold" fill="clear" [routerLink]="['/auth/login']">Iniciar sesion</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+

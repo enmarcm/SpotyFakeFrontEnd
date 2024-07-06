@@ -1,0 +1,23 @@
+ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --border-radius: 50%;
+    --background: var(--ion-color-success); /* Color verde de Spotify */
+    --color: var(--ion-color-light);
+    font-size: 28px;
+    width: 60px; /* Tamaño más grande */
+    height: 60px; /* Tamaño más grande */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transform y sombra */
+
+    &:hover {
+        transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el mouse */
+    }
+
+    &:active {
+        transform: scale(0.95); /* Efecto de pulsación al hacer clic */
+    }
+}

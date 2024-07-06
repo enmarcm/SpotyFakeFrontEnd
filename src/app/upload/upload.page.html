@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>upload</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black flex flex-col h-full p-8">
+    <ion-grid class="flex flex-col justify-start gap-4 py-2 min-h-screen">
+      <ion-row>
+        <ion-card class="flex h-52 px-4 py-2 items-center gap-2 w-full">
+          <img [src]="urlImage" class="w-24 h-24" />
+          <ion-card-header
+            class="flex-grow flex flex-col items-start justify-center gap-3"
+          >
+            <ion-card-title class="text-lg text-white"
+              >{{songName}}</ion-card-title
+            >
+            <ion-card-subtitle class="text-lg text-gray-300"
+              >{{albumName}}</ion-card-subtitle
+            >
+            <ion-card-subtitle class="text-md text-gray-400"
+              >{{duration}} ms</ion-card-subtitle
+            >
+          </ion-card-header>
+        </ion-card>
+      </ion-row>
+
+      <ion-row>
+        <label class="font-extrabold text-xl">Nombre de la cancion</label>
+        <ion-input
+          placeholder="New Song"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          [(ngModel)]="songName"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <label class="font-extrabold text-xl">Album de la canción</label>
+        <ion-input
+          placeholder="Los Avengers"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          [(ngModel)]="albumName"
+        ></ion-input>
+      </ion-row>
+
+      <!-- Input para imagen -->
+      <ion-row class="flex flex-col mb-4">
+        <label class="font-extrabold text-xl text-white mb-2"
+          >Imagen de la canción</label
+        >
+        <input
+          type="file"
+          class="p-2 border-2 border-green-500 rounded bg-gray-800 text-white cursor-pointer hover:border-green-600"
+          (change)="onFileSelectedImage($event)"
+          accept="image/*"
+          name="fileImage"
+        />
+      </ion-row>
+
+      <!-- Input para archivo MP3 -->
+      <ion-row class="flex flex-col mb-4">
+        <label class="font-extrabold text-xl text-white mb-2"
+          >Archivo MP3 de la canción</label
+        >
+        <input
+          type="file"
+          class="p-2 border-2 border-green-500 rounded bg-gray-800 text-white cursor-pointer hover:border-green-600"
+          (change)="onFileSelectedSong($event)"
+          accept="audio/mp3"
+          name="fileSong"
+        />
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button shape="round" color="success" (click)="uploadSong()" class="w-full"
+            >Subir canción</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "SpotyFake",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular-standalone"
+}

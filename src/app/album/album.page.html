@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>album</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div
+    [class]="dominantColor"
+    [style.background]="getGradientStyle(dominantColor)"
+  >
+    <ion-grid class="min-h-screen">
+      <ion-row class="h-[30%] min-h-56">
+        <ion-col size="12" class="flex justify-center items-center">
+          <div>
+            <ion-img [src]="urlImage" class="aspect-square shadow-lg"></ion-img>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="h-[20%] px-2">
+        <ion-col size="8" class="flex justify-start items-start flex-col">
+          <h2 class="font-black font-white text-3xl text-start my-4">
+            {{name.toUpperCase()}}
+          </h2>
+
+          <div class="w-full">
+            @for(artist of artists; track artist.id){
+            <div class="flex">
+              <h3 class="font-semibold text-sm text-gray-200">
+                {{artist.name}}
+              </h3>
+            </div>
+            }
+          </div>
+        </ion-col>
+
+        <ion-col size="4" class="flex justify-end items-center">
+          <!-- Hay que hacer metodo para que ponga toads las canciones en fila y reproduzca -->
+          <play-buttom />
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="px-2">
+        <ion-col size="8">
+          <div class="flex flex-col gap-2 items-start justify-center h-full">
+            <div class="flex flex-col items-start justify-center gap-1 mb-10">
+              <h4 class="font-semibold text-sm text-gray-200">
+                Número de Canciones: <span>{{totalTracks}} </span>
+              </h4>
+
+              <h4 class="font-semibold text-sm text-gray-200">
+                Fecha de lanzamiento: <span>{{date}}</span>
+              </h4>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="h-[20%] mt-4">
+        <ion-card class="w-full">
+          <ion-card-header>
+            <ion-card-title>Canciones</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              @for(song of songs; track song.id){
+              <ion-item
+                [id]="song.id"
+                class="flex items-center justify-start flex-col"
+                (click)="goToSong(song.id)"
+              >
+                <ion-thumbnail slot="start">
+                  <img
+                    [src]="urlImage"
+                    class="object-cover rounded-md shadow-md"
+                  />
+                </ion-thumbnail>
+                <ion-label>{{song.name}}</ion-label>
+              </ion-item>
+              }
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+      <ion-row class="mt-4 px-2">
+        <h3 class="text-start text-2xl text-bold">Artistas</h3>
+      </ion-row>
+
+      <ion-row class="px-2">
+        <div class="flex gap-2 items-start">
+          @for(artist of artists; track artist.id; let index= $index){
+          @if(artists.length === 1){
+          <ion-col size="10" (click)="goToArtist(artist.id)">
+            <ion-card class="w-36 h-max">
+              <img [src]="artist.imageUrl" class="w-36 h-36 object-fill" />
+
+              <ion-card-header>
+                <ion-card-title>{{artist.name}}</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+          }@else{
+          <ion-col size="6" (click)="goToArtist(artist.id)">
+            <ion-card class="w-36 h-max">
+              <img [src]="artist.imageUrl" class="w-36 h-36 object-fill" />
+
+              <ion-card-header>
+                <ion-card-title>{{artist.name}}</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+          } }
+        </div>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>genre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="px-4 py-2">
+
+  <div class="w-full p-4 sticky ">
+    <h1 class="font-mono font-semibold text-xl text-center text-white">{{name.toUpperCase()}}</h1>
+    <ion-searchbar [value]="name" [debounce]="1000" animated="true" (ionInput)="searchNewSong($event)" showClearButton="never"></ion-searchbar>
+  </div>
+
+  <ion-list class="h-full w-full overflow-scroll">
+    @for(song of songs; track song._id){
+      <ion-item class="my-1 px-3 hover:cursor-pointer" (click)="goToSong(song.id || song._id)">
+        <ion-avatar slot="start">
+          <ion-img [src]="song.urlImage" loading="lazy"/>
+        </ion-avatar>
+        <ion-label>{{ song.name }}</ion-label>
+        <ion-label class="text-end text-gray-600 text-sm">{{ song.artistNames[0] }}</ion-label>
+      </ion-item>
+    }
+  </ion-list>
+  
+  
+  <ion-infinite-scroll class="flex flex-col justify-center items-center p-6 mt-auto" id="loader" >
+    <div class="infinite-scroll-content w-8 h-8 ">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 100 100"
+        enable-background="new 0 0 100 100"
+        xml:space="preserve"
+  
+      >
+        <circle fill="none" stroke="#1b6dff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+        <line
+          fill="none"
+          stroke-linecap="round"
+          stroke="#1b6dff"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          x1="50"
+          y1="50"
+          x2="85"
+          y2="50.5"
+        >
+          <animateTransform
+            attributeName="transform"
+            dur="2s"
+            type="rotate"
+            from="0 50 50"
+            to="360 50 50"
+            repeatCount="indefinite"
+          />
+        </line>
+        <line
+          fill="none"
+          stroke-linecap="round"
+          stroke="#1b6dff"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          x1="50"
+          y1="50"
+          x2="49.5"
+          y2="74"
+        >
+          <animateTransform
+            attributeName="transform"
+            dur="15s"
+            type="rotate"
+            from="0 50 50"
+            to="360 50 50"
+            repeatCount="indefinite"
+          />
+        </line>
+      </svg>
+    </div>
+  </ion-infinite-scroll>
+
+
+ </ion-content> 

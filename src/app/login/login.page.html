@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black flex flex-col h-full p-8">
+    <ion-grid class="flex flex-col justify-start gap-8 py-6 min-h-screen">
+      <ion-row>
+        <label class="font-extrabold text-xl">Email o nombre de usuario</label>
+        <ion-input
+          placeholder="theenmanuel123@gmail.com / enmarcm"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          [(ngModel)]="username"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <label class="font-extrabold text-xl">Email o nombre de usuario</label>
+        <ion-input
+          type="password"
+          placeholder="NeverGonnaGiveYouUp"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          [(ngModel)]="password"
+        >
+          <ion-input-password-toggle
+            slot="end"
+            color="success"
+            class="border-transparent outline-none"
+          ></ion-input-password-toggle>
+        </ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-button
+          shape="round"
+          color="success"
+          class="mx-auto z-50"
+          (click)="login()"
+        >
+          <span class="text-white font-bold text-md">iniciar sesion</span>
+        </ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

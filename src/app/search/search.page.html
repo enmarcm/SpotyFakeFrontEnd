@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar
+    [debounce]="2000"
+      (ionInput)="handleInput($event)"
+    ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="gap-4 px-4 py-2 w-full flex flex-wrap">
+  <div class="grid w-full grid-cols-2 gap-4">
+    @for(genre of genres; track genre){
+    <div
+      class="w-full flex items-center justify-center p-1 rounded-lg shadow-md"
+      (click)="redirectToGenre(genre)"
+    >
+      <ion-card [color]="getRandomColor(genre)" class="w-full overflow-hidden hover:cursor-pointer hover:opacity-75 transform hover:scale-105 transition duration-300 ease-in-out shadow-md hover:shadow-xl">
+        <ion-card-header>
+          <ion-card-title class="flex justify-center items-center h-full"
+            ><h2 class="text-white text-xl text-center font-bold font-mono">
+              {{genre.toUpperCase()}}
+            </h2></ion-card-title
+          >
+        </ion-card-header>
+      </ion-card>
+    </div>
+    }
+  </div>
+</ion-content>

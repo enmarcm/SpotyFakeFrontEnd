@@ -1,0 +1,33 @@
+<div class="">
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Spoty<span class="text-green-400">Fake</span></ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-item button [routerLink]="['/tabs/home']">
+        <ion-label>Inicio</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/profile']">
+        <ion-label>Perfil</ion-label>
+      </ion-item>
+      <ion-item button [routerLink]="['/logout']">
+        <ion-label>Cerrar sesion</ion-label>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content" class="z-10">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    
+
+  </div>
+</div>

@@ -1,0 +1,1062 @@
+[
+  {
+    "name": "ÉXODO",
+    "id": "5kvw1bAOvzJdNi4hdgfaNf",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e022690127e1d6cd0aa35cc353b",
+    "release_date": "2024-06-20",
+    "total_tracks": 24,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/12GqGscKJx3aE4t07u7eVZ"
+        },
+        "href": "https://api.spotify.com/v1/artists/12GqGscKJx3aE4t07u7eVZ",
+        "id": "12GqGscKJx3aE4t07u7eVZ",
+        "name": "Peso Pluma",
+        "type": "artist",
+        "uri": "spotify:artist:12GqGscKJx3aE4t07u7eVZ"
+      }
+    ],
+    "songs": [
+      {
+        "name": "LA DURANGO",
+        "id": "5jVExEArvISIYu8mamVgfV",
+        "duration_ms": 262883,
+        "url_song": "https://p.scdn.co/mp3-preview/131b15e7a72ca3e205c82ec3c4ddc4df74074c91?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "ME ACTIVO",
+        "id": "4Hr713a1f4DUOZ7BPuD0PQ",
+        "duration_ms": 175027,
+        "url_song": "https://p.scdn.co/mp3-preview/5758c718b7693f6dce1bc9aefbb2a7d9d38d4093?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "LA PATRULLA",
+        "id": "2aYZaN5SmkRDLsrrV8GkBQ",
+        "duration_ms": 130614,
+        "url_song": "https://p.scdn.co/mp3-preview/3a490b1336290577f0bf5a3b5a68f73e70b17e68?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "LA PEOPLE II",
+        "id": "3YyTyWfSwAhesGCKpnuRKl",
+        "duration_ms": 141064,
+        "url_song": "https://p.scdn.co/mp3-preview/b92c17c1198b62d3d2c7debfc23f353493c9f540?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "SR. SMITH",
+        "id": "1qrhpxdnC4nUCyFefPVCDa",
+        "duration_ms": 161904,
+        "url_song": "https://p.scdn.co/mp3-preview/6da6cee6d97832f523e2109d785161dce8907b2a?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "ROMPE LA DOMPE",
+        "id": "1uF2sVVCJNWBGSQ2foMWkU",
+        "duration_ms": 165634,
+        "url_song": "https://p.scdn.co/mp3-preview/ab27a4f5a00d524386db16338101666b95cbefc5?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "MAMI",
+        "id": "4xv5AneqR0bTokomIPfGyT",
+        "duration_ms": 189251,
+        "url_song": "https://p.scdn.co/mp3-preview/7f7fc6042ee03ebd3ca508c9de8b7cf1a5f47c50?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "BELANOVA",
+        "id": "1jIirpaACmgb4nTYfywys4",
+        "duration_ms": 164822,
+        "url_song": "https://p.scdn.co/mp3-preview/0131ff6bfc4acd8be8a1fc75ab11bb66e7cab007?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "BRUCE WAYNE",
+        "id": "2ta17XNzvAo7J43BiW0T0Q",
+        "duration_ms": 214080,
+        "url_song": "https://p.scdn.co/mp3-preview/ecac4dca60c655c07fa82d64271a3ec68da237d3?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "HOLLYWOOD",
+        "id": "5GTBdEjZe7zEDp1N0eCZE4",
+        "duration_ms": 284864,
+        "url_song": "https://p.scdn.co/mp3-preview/705963b281ed4bb188b3034da800c2d3df05441c?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "RELOJ",
+        "id": "2DXK0YNGSqnaIEX5iaSIoK",
+        "duration_ms": 232205,
+        "url_song": "https://p.scdn.co/mp3-preview/f11451c051ee1403012b7a2fb8f938605eb28fbc?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "ICE",
+        "id": "5c9vvmRxose2Qk8JOxpxrE",
+        "duration_ms": 264159,
+        "url_song": "https://p.scdn.co/mp3-preview/33d5f9c26b6633aea8cfbb4829c6def9efc6a2ec?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "SOLICITADO",
+        "id": "7Km1xUI1qByxTCNMf05BZ1",
+        "duration_ms": 209462,
+        "url_song": "https://p.scdn.co/mp3-preview/945d8d48a116b9c90141abdce2c66c694c64f69e?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "SANTAL 33",
+        "id": "02cRoSfWU3RJNFyU3o4lhV",
+        "duration_ms": 190303,
+        "url_song": "https://p.scdn.co/mp3-preview/3748ab0fb543363b6476f872593cc4cb8a754b89?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "VINO TINTO",
+        "id": "5UHK1rtK4MpBGb0KppIYh4",
+        "duration_ms": 245997,
+        "url_song": "https://p.scdn.co/mp3-preview/71b03d38259e689176809244952de1fee5cefee0?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "14 - 14",
+        "id": "5LW4Z3Mz4CUliB4b6YyC7K",
+        "duration_ms": 187085,
+        "url_song": "https://p.scdn.co/mp3-preview/3a8757ae10424145e534a6a0942eb81d39e8ea59?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "GIMME A SECOND",
+        "id": "0S0pOwYmfbzGgQBYnL9U1j",
+        "duration_ms": 173067,
+        "url_song": "https://p.scdn.co/mp3-preview/5451a2a560b45d0ca274eb7a2d6bc5318802acc1?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "PUT EM IN THE FRIDGE",
+        "id": "2BACqEbfDpPMOO7xhSOz2B",
+        "duration_ms": 154200,
+        "url_song": "https://p.scdn.co/mp3-preview/de12b27c93b6fe43af90b365c2fd16e5f671548f?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "PA NO PENSAR",
+        "id": "3HQztiNynPPCCuowUnKoVR",
+        "duration_ms": 200960,
+        "url_song": "https://p.scdn.co/mp3-preview/e96c5eec3a231aed114641a682b186d794fcdefc?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "PESO COMPLETO",
+        "id": "7KDKBWgusjNgJXX2494v8u",
+        "duration_ms": 193714,
+        "url_song": "https://p.scdn.co/mp3-preview/93345ffdb8bfc279a4063414b8a86e657c660b40?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "The Secret of Us",
+    "id": "56bdWeO40o3WfAD2Lja4dl",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e026e2101520787791370f4a96b",
+    "release_date": "2024-06-21",
+    "total_tracks": 13,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4tuJ0bMpJh08umKkEXKUI5"
+        },
+        "href": "https://api.spotify.com/v1/artists/4tuJ0bMpJh08umKkEXKUI5",
+        "id": "4tuJ0bMpJh08umKkEXKUI5",
+        "name": "Gracie Abrams",
+        "type": "artist",
+        "uri": "spotify:artist:4tuJ0bMpJh08umKkEXKUI5"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Felt Good About You",
+        "id": "7vLN0buLFK3BPnnx0yVVPV",
+        "duration_ms": 164693,
+        "url_song": null
+      },
+      {
+        "name": "Risk",
+        "id": "0gZGUAO42F1HmzZWHNPGAu",
+        "duration_ms": 191586,
+        "url_song": null
+      },
+      {
+        "name": "Blowing Smoke",
+        "id": "7Eg4LsQTM6QOqeCS8EihZI",
+        "duration_ms": 232280,
+        "url_song": null
+      },
+      {
+        "name": "I Love You, I'm Sorry",
+        "id": "51rfRCiUSvxXlCSCfIztBy",
+        "duration_ms": 157146,
+        "url_song": null
+      },
+      {
+        "name": "us. (feat. Taylor Swift)",
+        "id": "0hhzNPE68LWLfgZwdpxVdR",
+        "duration_ms": 242666,
+        "url_song": null
+      },
+      {
+        "name": "Let It Happen",
+        "id": "7mFhyM0k5ZKG8jxcwmPVYl",
+        "duration_ms": 260946,
+        "url_song": null
+      },
+      {
+        "name": "Tough Love",
+        "id": "6WEXy56jM0Nl3bZHY9l7aH",
+        "duration_ms": 169146,
+        "url_song": null
+      },
+      {
+        "name": "I Knew It, I Know You",
+        "id": "3JGtEMktx8XnEVjVUYgU0M",
+        "duration_ms": 252920,
+        "url_song": null
+      },
+      {
+        "name": "Gave You I Gave You I",
+        "id": "0SKJtq3JoXs7A3UjaNLKWJ",
+        "duration_ms": 269280,
+        "url_song": null
+      },
+      {
+        "name": "Normal Thing",
+        "id": "1MPulKrmSK9EW5IrawhdRs",
+        "duration_ms": 242480,
+        "url_song": null
+      },
+      {
+        "name": "Good Luck Charlie",
+        "id": "7yzUchyVOc7d4OyaexqPEI",
+        "duration_ms": 236480,
+        "url_song": null
+      },
+      {
+        "name": "Free Now",
+        "id": "1aThn8Pk8zRzGGPClZe9Oq",
+        "duration_ms": 214080,
+        "url_song": null
+      },
+      {
+        "name": "Close To You",
+        "id": "2bl81llf715VEEbAx03yvB",
+        "duration_ms": 225973,
+        "url_song": null
+      }
+    ]
+  },
+  {
+    "name": "KYGO",
+    "id": "5BrjR0P59l9SsbODztqs3q",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e0243c39d57c55a3580766551c9",
+    "release_date": "2024-06-21",
+    "total_tracks": 18,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4"
+        },
+        "href": "https://api.spotify.com/v1/artists/23fqKkggKUBHNkbKtXEls4",
+        "id": "23fqKkggKUBHNkbKtXEls4",
+        "name": "Kygo",
+        "type": "artist",
+        "uri": "spotify:artist:23fqKkggKUBHNkbKtXEls4"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Intro",
+        "id": "2vvWBH2VnScjAuFzNjdoxX",
+        "duration_ms": 75709,
+        "url_song": "https://p.scdn.co/mp3-preview/cd586ac9322305293e2c1c6805613109862cd63c?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "The Feeling",
+        "id": "0tVt6EukkvPm3V0JRP5wzW",
+        "duration_ms": 190327,
+        "url_song": "https://p.scdn.co/mp3-preview/96f28bda57b8edb8d17b9845d5b6c7e2239e9054?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Whatever",
+        "id": "4rTPLtqJxa4UtCBkdMwSp6",
+        "duration_ms": 178273,
+        "url_song": "https://p.scdn.co/mp3-preview/9cc7374c691cd62f968542856becc86e5837eff5?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Surrender",
+        "id": "0WNVWTrzTBweks61cEr7R8",
+        "duration_ms": 196857,
+        "url_song": "https://p.scdn.co/mp3-preview/448c234225af3cf506cd86faf97177b3de36bac0?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Can't Do It On My Own",
+        "id": "3Q7VyyNH6u2KMPVa6PtUAW",
+        "duration_ms": 244698,
+        "url_song": "https://p.scdn.co/mp3-preview/8c549755ad39759971135eaa27497252dd89b772?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Me Before You",
+        "id": "3zLIKAkrLLwzNe4RsD5EBC",
+        "duration_ms": 215976,
+        "url_song": "https://p.scdn.co/mp3-preview/5f3650663380ac2ed25139f29784c56e9ea47c6d?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Healing (Shattered Heart)",
+        "id": "5upoXNxaUFybIF8XfRAaDp",
+        "duration_ms": 162051,
+        "url_song": "https://p.scdn.co/mp3-preview/8ebc0174edaf81fc622c8db74372430c484e8ad5?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Lighthouse",
+        "id": "4p9FFgvhchLHLoq9yaH1po",
+        "duration_ms": 191149,
+        "url_song": "https://p.scdn.co/mp3-preview/9bef297fc3c33458b49d2f45aab7947c7b33e1f8?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Found Another Love",
+        "id": "3icRjPhohuRhTowrrZcayB",
+        "duration_ms": 262309,
+        "url_song": "https://p.scdn.co/mp3-preview/14e68539209fcb3141de1422020bfc698258fa06?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Louder",
+        "id": "08s07LwInGpJUeA8rUtyMD",
+        "duration_ms": 180190,
+        "url_song": "https://p.scdn.co/mp3-preview/da2782158b3bcc4a2d0c262c39a9f9286e2c3c82?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Fade Away",
+        "id": "46G1BWN5RkCw6BOG3X1Ou6",
+        "duration_ms": 305842,
+        "url_song": "https://p.scdn.co/mp3-preview/67701fcbf210e64019f845bd7d703c062c9c1ecf?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Hold On",
+        "id": "61UHYLpt5koa0wHhw3n6Uz",
+        "duration_ms": 258517,
+        "url_song": "https://p.scdn.co/mp3-preview/f63944a2ebab21e091cadf27bdf58ce71c5b47b1?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Let Go",
+        "id": "1xyDYg59xs65uMonUuog9i",
+        "duration_ms": 187811,
+        "url_song": "https://p.scdn.co/mp3-preview/76edcfccbf49ae8ece74dd505d7d4b6d4af54a3d?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "For Life (feat. Nile Rodgers)",
+        "id": "6YutTqJz3jGfLMfzIHpSTf",
+        "duration_ms": 175803,
+        "url_song": "https://p.scdn.co/mp3-preview/2cab6eef175ce8f680c71b833f00d4003d23408a?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Without You (with HAYLA)",
+        "id": "6L9UuUMs32tHkwPufnmZee",
+        "duration_ms": 263879,
+        "url_song": "https://p.scdn.co/mp3-preview/992fec65a99d15acf32d5913ce04a9175279402c?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Wait - Kygo Remix (2024 Edit)",
+        "id": "1mshGixz5e5ZXIUmeaDnWd",
+        "duration_ms": 335740,
+        "url_song": "https://p.scdn.co/mp3-preview/7e1772063e33940bc71dfe86b20214c8e5ebd480?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "You Can Feel",
+        "id": "3TFenlViwws8GZVd5aWFE4",
+        "duration_ms": 191596,
+        "url_song": "https://p.scdn.co/mp3-preview/db96236cabcb6c803c0e9ad4b817c70e636f7845?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Love Me Now Or Lose Me Later",
+        "id": "6eKTQs8C5k4wvw5pqQF9tf",
+        "duration_ms": 221686,
+        "url_song": "https://p.scdn.co/mp3-preview/16160084fee3fc9ffacb1795f90ff8f4f5d1e70e?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "Malhablado",
+    "id": "0BEsicKeenBHuBAkF6iDsT",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e0290d2b9b5560abb800a49b43a",
+    "release_date": "2024-06-14",
+    "total_tracks": 11,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4VAZ6unMJx5upeWn0aFYuo"
+        },
+        "href": "https://api.spotify.com/v1/artists/4VAZ6unMJx5upeWn0aFYuo",
+        "id": "4VAZ6unMJx5upeWn0aFYuo",
+        "name": "Diamante Eléctrico",
+        "type": "artist",
+        "uri": "spotify:artist:4VAZ6unMJx5upeWn0aFYuo"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Algo Bueno Tenía Que Tener (Bogotá)",
+        "id": "6grS5q6ouNFX4ZTyr8ffR6",
+        "duration_ms": 210960,
+        "url_song": "https://p.scdn.co/mp3-preview/167dc577ace116e3fda861c7486dc60410a734fd?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "El Big Bang",
+        "id": "5Qsh6WctiiWYZBLlYjvsAC",
+        "duration_ms": 243830,
+        "url_song": "https://p.scdn.co/mp3-preview/0539e8b78e08125d9b515c4183a9d109306b2ea5?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Yoya",
+        "id": "3SF9pCh1TCn7zBMy9KGbZi",
+        "duration_ms": 244189,
+        "url_song": "https://p.scdn.co/mp3-preview/49e981f76d7283299fd512c10b39de54486b1424?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Porcelana",
+        "id": "52C2feU770BVGoYMVOUGlI",
+        "duration_ms": 224584,
+        "url_song": "https://p.scdn.co/mp3-preview/6490f006b529950f29ada1a59dc2f7756832a802?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "El Amor Es un Juego de Perdedores",
+        "id": "4H2C30FwzD06bcb9S9tNJn",
+        "duration_ms": 208839,
+        "url_song": "https://p.scdn.co/mp3-preview/d47076c130face6165ce41eb006d7d62f686cf79?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "LVRBOY",
+        "id": "4fdQVumUyELugJARStk0X6",
+        "duration_ms": 249917,
+        "url_song": "https://p.scdn.co/mp3-preview/969097aec750d18772eda8a0e426596571e08de5?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Cargamerca",
+        "id": "7smFzghgQYEAizvffevyVO",
+        "duration_ms": 229257,
+        "url_song": "https://p.scdn.co/mp3-preview/f1f91e1da64b11b4432bcfbfbaa4a3466071c459?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Déjame Como Me Encontraste",
+        "id": "6hOdMbYTk756EUk9IRyqO6",
+        "duration_ms": 193252,
+        "url_song": "https://p.scdn.co/mp3-preview/7c6135201f6004e74abf7668da5c4280bf9bf550?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Ella No Es Así",
+        "id": "0hz3XIv4qXdjCNveJOfRnc",
+        "duration_ms": 206912,
+        "url_song": "https://p.scdn.co/mp3-preview/00b3ddc95b40312580265472d60c0476a8684461?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Malhablado",
+        "id": "6KE0KMpwSb7eLgdhI43uly",
+        "duration_ms": 207158,
+        "url_song": "https://p.scdn.co/mp3-preview/e8362dad958fcd17c55b12e3ff41324267d3d381?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Maldito Futuro",
+        "id": "3t6yyXyXXswGSNvumXYDnK",
+        "duration_ms": 188677,
+        "url_song": "https://p.scdn.co/mp3-preview/f5043113506facbe5add3441906e6a1ad801c355?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "Quién es Dei V?",
+    "id": "2i6InsyHZPR6NBFniDivF5",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e02e4e2fa46f29fb191f699c409",
+    "release_date": "2024-06-14",
+    "total_tracks": 16,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2YRyPiW98bpkARAS4B3OQP"
+        },
+        "href": "https://api.spotify.com/v1/artists/2YRyPiW98bpkARAS4B3OQP",
+        "id": "2YRyPiW98bpkARAS4B3OQP",
+        "name": "Dei V",
+        "type": "artist",
+        "uri": "spotify:artist:2YRyPiW98bpkARAS4B3OQP"
+      }
+    ],
+    "songs": [
+      {
+        "name": "David",
+        "id": "66wmpNZdHK6yenH3eMZjGt",
+        "duration_ms": 162798,
+        "url_song": "https://p.scdn.co/mp3-preview/88e1e5791a464e2d9783e74f35b87d2336243e69?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Ticke (with YOVNGCHIMI)",
+        "id": "0QAkNmKS8bYmnAm6IQfFMj",
+        "duration_ms": 154277,
+        "url_song": "https://p.scdn.co/mp3-preview/a3f37233f49daeb3171a7160fd433a62d3dd880d?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "VNKLF (with Foreign Teck)",
+        "id": "4UezZq4mWX19bZ3r4CHjDv",
+        "duration_ms": 137471,
+        "url_song": "https://p.scdn.co/mp3-preview/ecc7e646a9bd37f23df3ad5bf573ee5c890debe2?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Hot (with Lunay)",
+        "id": "77SzXqzzyf6wyvVxAmM9cB",
+        "duration_ms": 157142,
+        "url_song": "https://p.scdn.co/mp3-preview/16c27eb694161e0b32130721f2e0c2f6d0007721?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "X2",
+        "id": "2dHM8nntX46a53H9kpD5yj",
+        "duration_ms": 178691,
+        "url_song": "https://p.scdn.co/mp3-preview/3b8727dca68da942dc6876b342bfb49b9983e833?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Mueve el QLO",
+        "id": "5ZrNLcUm17gzeWLUNKmMQi",
+        "duration_ms": 131000,
+        "url_song": "https://p.scdn.co/mp3-preview/1a4a9ededc05c2bdabc4c1a74fb8c8f111d73834?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "PPV (with De La Ghetto)",
+        "id": "5MFOGe9T65Ms0QKGajQK3H",
+        "duration_ms": 189601,
+        "url_song": "https://p.scdn.co/mp3-preview/7575feec124315fccb61c718cf17d2ff4a03a288?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Rapido (with Cris Mj)",
+        "id": "1emJPywtseFLmLCcPY92dW",
+        "duration_ms": 146000,
+        "url_song": "https://p.scdn.co/mp3-preview/1bbe2e1a99591c681d6cb8801c9be74564aec0db?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Bellac@ (with Ryan Castro)",
+        "id": "1wgTrb2jsGerbdAB4uQIym",
+        "duration_ms": 179392,
+        "url_song": "https://p.scdn.co/mp3-preview/24a9f4330ca2c709139d72c7ec9e7ad422f8b60f?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Maña",
+        "id": "1XozqGtY464fibUudIjuPI",
+        "duration_ms": 196036,
+        "url_song": "https://p.scdn.co/mp3-preview/045ffc4ba3562d933053cfa7442a3936c628a767?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Martini",
+        "id": "6opCVD6WJNDyBAxvrzKLnH",
+        "duration_ms": 164365,
+        "url_song": "https://p.scdn.co/mp3-preview/f182e5bd7922356af989b674514699876ec3ec06?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "CLIMA (with Foreign Teck)",
+        "id": "0kX6vjW7YrhHxrpZS7jcxa",
+        "duration_ms": 164042,
+        "url_song": "https://p.scdn.co/mp3-preview/03ca3660e83f95666f49cb779f178fee3eaa3e5f?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Quién es Dei V?",
+        "id": "5cDb5zMz121WQde65PLZY4",
+        "duration_ms": 162244,
+        "url_song": "https://p.scdn.co/mp3-preview/76842e0f4399a1f9f8045a669d2340b0e311f072?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Narcotics (with Bryant Myers)",
+        "id": "18Eb38xeQJQxs0R3n3VBQa",
+        "duration_ms": 173991,
+        "url_song": "https://p.scdn.co/mp3-preview/eaec04c15d5127461e756009b77d098210dde651?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Trending Remix (with Myke Towers)",
+        "id": "6LB49nISRDX9hK0d28SfY1",
+        "duration_ms": 225154,
+        "url_song": "https://p.scdn.co/mp3-preview/517bd04124bcf90cc0c771c0f41405c7bd2d6a9a?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Flavor Spicy",
+        "id": "7acXJmsnX1NdRgL7n2crjB",
+        "duration_ms": 137733,
+        "url_song": "https://p.scdn.co/mp3-preview/53ea9b321302d5d1bcda639c4f56c8bec08cf06f?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "1 OF 1",
+    "id": "6nrflCSqW4aAy4ZZ1PGp7I",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e02d5f659ff19cf62a70e1c3519",
+    "release_date": "2024-06-06",
+    "total_tracks": 6,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/1r4hJ1h58CWwUQe3MxPuau"
+        },
+        "href": "https://api.spotify.com/v1/artists/1r4hJ1h58CWwUQe3MxPuau",
+        "id": "1r4hJ1h58CWwUQe3MxPuau",
+        "name": "Maluma",
+        "type": "artist",
+        "uri": "spotify:artist:1r4hJ1h58CWwUQe3MxPuau"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/1TA5sGRlKUJXBN4ZyJuDIX"
+        },
+        "href": "https://api.spotify.com/v1/artists/1TA5sGRlKUJXBN4ZyJuDIX",
+        "id": "1TA5sGRlKUJXBN4ZyJuDIX",
+        "name": "Blessd",
+        "type": "artist",
+        "uri": "spotify:artist:1TA5sGRlKUJXBN4ZyJuDIX"
+      }
+    ],
+    "songs": [
+      {
+        "name": "1 of 1",
+        "id": "0S1qhPO7vac9xRzGnDPTrr",
+        "duration_ms": 221217,
+        "url_song": "https://p.scdn.co/mp3-preview/64991086aefc7ab1d7b2736b1895d60db9d13cee?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Call Me",
+        "id": "0VaOGXNtoYUf1vAXM0X9ST",
+        "duration_ms": 170000,
+        "url_song": "https://p.scdn.co/mp3-preview/808df2ef807bdf531469e7078af2d08fb36769ad?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Oe Bebé",
+        "id": "3iiOomNkXwuYomFgZJYMmB",
+        "duration_ms": 186463,
+        "url_song": null
+      },
+      {
+        "name": "Manrique",
+        "id": "2hzzCANviE4ljKy0yXlAhu",
+        "duration_ms": 176005,
+        "url_song": null
+      },
+      {
+        "name": "Sisas Nada (feat. Hades66)",
+        "id": "5nhCWPCsVXj0uyfSgeTEpk",
+        "duration_ms": 200000,
+        "url_song": "https://p.scdn.co/mp3-preview/5ecfb9ea994aec4e3e0d8d1f86fcd8ce4e8ac521?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Goyard/GTA",
+        "id": "6HPDJQzWcg6cpgmbRfLOoV",
+        "duration_ms": 244000,
+        "url_song": null
+      }
+    ]
+  },
+  {
+    "name": "Hotel Caracas",
+    "id": "5ZH7IdEga8gne83NYz8nsS",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e024843573f003d24528fdbd509",
+    "release_date": "2024-05-31",
+    "total_tracks": 15,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2wkoKEfS6dXwThbyTnZWFU"
+        },
+        "href": "https://api.spotify.com/v1/artists/2wkoKEfS6dXwThbyTnZWFU",
+        "id": "2wkoKEfS6dXwThbyTnZWFU",
+        "name": "Mau y Ricky",
+        "type": "artist",
+        "uri": "spotify:artist:2wkoKEfS6dXwThbyTnZWFU"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Muriendo de Miedo",
+        "id": "2bT6v6frik0lLBlFNbv1uT",
+        "duration_ms": 213249,
+        "url_song": "https://p.scdn.co/mp3-preview/471c3ec202c407c4b25a8fa407e10304603733c0?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Pasado Mañana",
+        "id": "79vaLBBCDHmYvY8JUcnDj9",
+        "duration_ms": 137693,
+        "url_song": "https://p.scdn.co/mp3-preview/9548ee7bcfb6e8621639fb597330474f6d39ec5f?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Canción 2",
+        "id": "04yUAvNYBJfOescfqT8UlS",
+        "duration_ms": 148767,
+        "url_song": "https://p.scdn.co/mp3-preview/1a93233da4cb664d97a85314bb09e1abe517035c?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "David Beckham",
+        "id": "4QnLpAWF55Hd9ReL4xpJND",
+        "duration_ms": 135330,
+        "url_song": "https://p.scdn.co/mp3-preview/1d57e9b52ab7323d6b6c6bb48d2f441c97367c75?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Glock",
+        "id": "6sjnBVTDd1JYwb1mboxJy8",
+        "duration_ms": 167264,
+        "url_song": "https://p.scdn.co/mp3-preview/b3b12ae75471ae8935ae2db2c40215d29b33933a?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Vas a Destrozarme",
+        "id": "3pGXsSv5CM4Xl4GATNfB9v",
+        "duration_ms": 174480,
+        "url_song": "https://p.scdn.co/mp3-preview/50a95a08df16cefff16dbafdaa1f3f2dc4e4c6e1?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Gran Día",
+        "id": "02F3ap4jOzK7Yhjv102C9B",
+        "duration_ms": 193840,
+        "url_song": "https://p.scdn.co/mp3-preview/ee8a6966dc6ac3cc19f32366af1e67f28f8e23cb?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Wow",
+        "id": "60Y5s3JmVhfORq1ATJpfSS",
+        "duration_ms": 167409,
+        "url_song": "https://p.scdn.co/mp3-preview/79a93a8213f295599728993cbadc85744422e523?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Fetiche",
+        "id": "5bpaaNUGknnGSNsUmThj4K",
+        "duration_ms": 187777,
+        "url_song": "https://p.scdn.co/mp3-preview/0ed4f7eecf66f22a7bac9ecf8b2ca72589d439eb?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Manera Linda de Morir",
+        "id": "1b7Sb8QcSOKzkqTRL2Fu1J",
+        "duration_ms": 173514,
+        "url_song": "https://p.scdn.co/mp3-preview/df1ee6fbcb97159423e1b7f715d0adbdebccedb6?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Hasta Olvidarte",
+        "id": "4Si5fSGdnlntioOKmpDnu8",
+        "duration_ms": 188862,
+        "url_song": "https://p.scdn.co/mp3-preview/a6991f731c457ca9d2f8de8233a3e3eddf2fa1a9?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Espectacular",
+        "id": "3GOkMzVUvW3ax2bDIe0U8C",
+        "duration_ms": 175217,
+        "url_song": "https://p.scdn.co/mp3-preview/cf19abb641e38618d82ca5c74c4332ee63f28e71?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Fkn Mentiroso",
+        "id": "7KsWmc9QUJo8f9dQlOAqI0",
+        "duration_ms": 139455,
+        "url_song": "https://p.scdn.co/mp3-preview/d2ff895de58dda61251e4d34c75c23bb794e8c1b?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Amarte Tanto",
+        "id": "0cnb2iNrenKOGosJzKKE1p",
+        "duration_ms": 236448,
+        "url_song": "https://p.scdn.co/mp3-preview/b3e8151ab1e3098385a4ebed158fcbdfe67c9d6d?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Karma",
+        "id": "1aD57u2jMh60hE9bhI7sTd",
+        "duration_ms": 194232,
+        "url_song": "https://p.scdn.co/mp3-preview/2dab6e0cb920d12e7c08c4d6a452e8836401a75e?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "Boca Chueca, Vol. 1",
+    "id": "5wkYyTtAUS2Wi6pHYpdsSU",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e02b28b55cc0ac0ad1131ece780",
+    "release_date": "2024-05-30",
+    "total_tracks": 19,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/66ihevNkSYNzRAl44dx6jJ"
+        },
+        "href": "https://api.spotify.com/v1/artists/66ihevNkSYNzRAl44dx6jJ",
+        "id": "66ihevNkSYNzRAl44dx6jJ",
+        "name": "Carin Leon",
+        "type": "artist",
+        "uri": "spotify:artist:66ihevNkSYNzRAl44dx6jJ"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Cuando la vida sea trago",
+        "id": "7d7OOUsLbkGwxWOLmhZNO4",
+        "duration_ms": 173000,
+        "url_song": "https://p.scdn.co/mp3-preview/0852e4d827f9d5018f4d537fc48f17f91c1ea3fc?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Otra vez",
+        "id": "5ayBbdkJqR4HNueyongutW",
+        "duration_ms": 196551,
+        "url_song": "https://p.scdn.co/mp3-preview/6ac95493e5881c1d938e0edf274c3785785edc90?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Casi oficial",
+        "id": "1tpTj9NAKWUFEabYfkzmRH",
+        "duration_ms": 227000,
+        "url_song": "https://p.scdn.co/mp3-preview/3bbe36ec4d1be3f657885b701de957a0948c9c9e?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Frené mis pies",
+        "id": "6prKLegn2jETLHMBRJZQky",
+        "duration_ms": 215755,
+        "url_song": "https://p.scdn.co/mp3-preview/c12ad35334c138102455e6ff8a2a71fb4de1541a?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Círculo vicioso",
+        "id": "250u9IxmkjX8dA09RXEVj8",
+        "duration_ms": 157752,
+        "url_song": "https://p.scdn.co/mp3-preview/6829b8bc4bf61ea6eed07c68b966bbdb99941710?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Que haga el paro",
+        "id": "3XEUQy0mc1tEc5IbSFsJGj",
+        "duration_ms": 138712,
+        "url_song": "https://p.scdn.co/mp3-preview/faf768ccaec084ebc32a0ebf33de5185dc505289?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Bebé no cambies tú",
+        "id": "26OpmSF2NBuNokJhqrbQnE",
+        "duration_ms": 171382,
+        "url_song": "https://p.scdn.co/mp3-preview/2bd6e40017fb8eaa8eceace1f95c13345c715f15?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "⁠Por eso bye",
+        "id": "7CIbI93S0yuflkGyM9hQTl",
+        "duration_ms": 181500,
+        "url_song": "https://p.scdn.co/mp3-preview/23c461c45f4a9d0e159e7d7eae48ae6871ba34dc?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Qué feo se siente el amor",
+        "id": "2mCKFkM7bt8iaSF1GQocpS",
+        "duration_ms": 185285,
+        "url_song": "https://p.scdn.co/mp3-preview/b602781ab7c1156a593e494240d498d0a2cb5887?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "No sé",
+        "id": "3f82CTFrfRUQcFnPcOBhU4",
+        "duration_ms": 189107,
+        "url_song": "https://p.scdn.co/mp3-preview/fa07672dc3841d00286811c7403aa30ce42c16ef?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "The one (Pero no como yo)",
+        "id": "03J82tGipvxwFZ14smkuVj",
+        "duration_ms": 176800,
+        "url_song": "https://p.scdn.co/mp3-preview/d70444341c5783cceb411bc103cc06aa0de0de8b?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Lamentablemente",
+        "id": "7GGESORWVDTZnQ8mUENimX",
+        "duration_ms": 195428,
+        "url_song": "https://p.scdn.co/mp3-preview/b3f4605fd8f312e52479786c323e633e29448b77?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "⁠Aviso importante",
+        "id": "2bvaWmdYkg2xPDDxAC8RkD",
+        "duration_ms": 191250,
+        "url_song": "https://p.scdn.co/mp3-preview/4bb61bb39a22e1647281b48736008345943e6e42?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "It was always you (Siempre fuiste tú)",
+        "id": "2SmXed2QmKo2esYa86oQRV",
+        "duration_ms": 209493,
+        "url_song": "https://p.scdn.co/mp3-preview/497c6c7c953c11f2534076ab7ab66b29db18dc8c?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Banqueteras",
+        "id": "2ro79VU4B3QinzlugWQ4ED",
+        "duration_ms": 196384,
+        "url_song": "https://p.scdn.co/mp3-preview/705541b43a34b6acbfbd4e8dced27201c44d07bc?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "⁠1",
+        "id": "0JukfGB7110tv7B8oX4qtc",
+        "duration_ms": 159200,
+        "url_song": "https://p.scdn.co/mp3-preview/6195a24c904263492e889addb8bcf176c21ababd?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Aunque tú no lo sepas",
+        "id": "1sZzTN6MOnagdaHMd0n5lm",
+        "duration_ms": 194838,
+        "url_song": "https://p.scdn.co/mp3-preview/1bacb17122d4c52db19cedda8a377fa92d6dfe2e?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Por culpa de un tercero",
+        "id": "3qjpDAoUAHs1jrIg1VwxxX",
+        "duration_ms": 174206,
+        "url_song": "https://p.scdn.co/mp3-preview/292336cff16813bb9f73363d801bcd8017bd8e84?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Despídase bien",
+        "id": "1llaUCfG1g5WzKt6JafYyk",
+        "duration_ms": 231375,
+        "url_song": "https://p.scdn.co/mp3-preview/a65add3b159b4ad675a731a06a6f716ef4085307?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "IRENE ALEJANDRA",
+    "id": "1EtK1Zju9gAMz9uoQ0q9rb",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e02bb46e98573f464d4ab199c9a",
+    "release_date": "2024-05-31",
+    "total_tracks": 10,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3KaNWDYObY73SDpcZBRzuw"
+        },
+        "href": "https://api.spotify.com/v1/artists/3KaNWDYObY73SDpcZBRzuw",
+        "id": "3KaNWDYObY73SDpcZBRzuw",
+        "name": "Irepelusa",
+        "type": "artist",
+        "uri": "spotify:artist:3KaNWDYObY73SDpcZBRzuw"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Querida Irenita",
+        "id": "1RFz67iYNxW8IUOaAqj9b2",
+        "duration_ms": 177840,
+        "url_song": "https://p.scdn.co/mp3-preview/f83737a9fd955b316dd204df430dd6682a546a88?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "XQ TAN DIFERENTE? (≠)",
+        "id": "5DeT4M05uBKK6mAuVTXYIY",
+        "duration_ms": 180028,
+        "url_song": "https://p.scdn.co/mp3-preview/fa606b3426722844cfb21e07c7190fd55d3dbb6c?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Nervios de Acero",
+        "id": "3jzqO963nfQI12pASJz7PN",
+        "duration_ms": 187368,
+        "url_song": "https://p.scdn.co/mp3-preview/4e18d683f1af527f626942294ae5d93599394f5f?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Al Cielo No Se Va Llorando",
+        "id": "2HgpfbSyOoSlXMEOQ43hHl",
+        "duration_ms": 182000,
+        "url_song": "https://p.scdn.co/mp3-preview/8ef019f7a59e7f1f37afde4230bdc057a2b8b1de?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Losken Roland",
+        "id": "3rmCgDHTBACMhavAlMvHN5",
+        "duration_ms": 140955,
+        "url_song": "https://p.scdn.co/mp3-preview/d294bc458816b5ffac382d6474ed7439a4116b21?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Los Domingos La Paso Solita",
+        "id": "5u2Xd6Qx1lwpoxCj378nUz",
+        "duration_ms": 199572,
+        "url_song": "https://p.scdn.co/mp3-preview/558854835bdc0690fdd8bd88556f83698fed17e0?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Avísame",
+        "id": "05SIgsBrUqHgK09TLg0B3O",
+        "duration_ms": 194847,
+        "url_song": "https://p.scdn.co/mp3-preview/b1a077a98098b9f2c1f71d5f76239c3cdf24da2f?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Te Amé Temprano",
+        "id": "0lWowR8X67uvdZLAOpVcTa",
+        "duration_ms": 217096,
+        "url_song": "https://p.scdn.co/mp3-preview/bd5aa9f185917a9e31e5bf73d29d304fbdbacbdf?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "REPAVE (Cumbión Loco)",
+        "id": "2Csf7A3qxy0ZOhN51966by",
+        "duration_ms": 142667,
+        "url_song": "https://p.scdn.co/mp3-preview/06d1e79812bfb25822ea3f5e8f110a7f97d5c2d1?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "cAnAimA",
+        "id": "2LKpAspoJbTagy6HdHsU7L",
+        "duration_ms": 106736,
+        "url_song": "https://p.scdn.co/mp3-preview/02b35475a163814f008020d59b2a43730f1a41c6?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  },
+  {
+    "name": "cuatro",
+    "id": "1IwCEfVYg8KlEankYmqeP7",
+    "urlImage": "https://i.scdn.co/image/ab67616d00001e027006456f86dfcbae0b9f0ff9",
+    "release_date": "2024-05-23",
+    "total_tracks": 12,
+    "artists": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/28gNT5KBp7IjEOQoevXf9N"
+        },
+        "href": "https://api.spotify.com/v1/artists/28gNT5KBp7IjEOQoevXf9N",
+        "id": "28gNT5KBp7IjEOQoevXf9N",
+        "name": "Camilo",
+        "type": "artist",
+        "uri": "spotify:artist:28gNT5KBp7IjEOQoevXf9N"
+      }
+    ],
+    "songs": [
+      {
+        "name": "Gordo",
+        "id": "1RbTpIqzrKEN4ID5KbMEX6",
+        "duration_ms": 220830,
+        "url_song": "https://p.scdn.co/mp3-preview/6b78a1dc49d1dd9c25968c9c9643f52e9ea0658d?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "No Se Vale",
+        "id": "6rrcRnAauncgbCZR6uYVNI",
+        "duration_ms": 180494,
+        "url_song": "https://p.scdn.co/mp3-preview/87a1d2b209944eae35a0ca8c61f0083b58b80c3d?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "PLIS",
+        "id": "2uei5EK0iBwbjEKwoX6j5p",
+        "duration_ms": 222800,
+        "url_song": "https://p.scdn.co/mp3-preview/32fb55951ae7e55bcf653fb3d5061fcb279d5cab?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Autodiagnóstico",
+        "id": "0UiVWrn3x2X1fdsiYInybG",
+        "duration_ms": 187433,
+        "url_song": "https://p.scdn.co/mp3-preview/39d458796fe9adf143a2b316a3ba2148facfa092?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "En Tus Sueños o En Los Míos",
+        "id": "0hEz9BJRKozJLLKjgpk2wJ",
+        "duration_ms": 192200,
+        "url_song": "https://p.scdn.co/mp3-preview/557ed2327b498302576d21e21a85fd0ab54e74d0?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Una Vida Pasada",
+        "id": "2mLTxNa0bwZX8eNBsuODLX",
+        "duration_ms": 218500,
+        "url_song": "https://p.scdn.co/mp3-preview/34835b17b19712cd07452fab1d290b78c1bdf976?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Amor de Extranjeros",
+        "id": "1uIGbHPc5HdarDGzhxK0YB",
+        "duration_ms": 150397,
+        "url_song": "https://p.scdn.co/mp3-preview/88e55cce68413d13b1a763a9d5f52307d554ca7e?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Corazón de Hojalata",
+        "id": "2Ozl3YKRjZyiKfFWuOXmVr",
+        "duration_ms": 239633,
+        "url_song": "https://p.scdn.co/mp3-preview/6f450db79e81778ba0fb0a9d42b5f4a86c998053?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Misión Imposible",
+        "id": "6QcfnibTADVs93TJGHAFSK",
+        "duration_ms": 154794,
+        "url_song": "https://p.scdn.co/mp3-preview/ba4f3676060bf008bd3e00c6b530142f3b3c7135?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Sálvame",
+        "id": "2gD0YaqSIN08kCloPjwaUK",
+        "duration_ms": 214566,
+        "url_song": "https://p.scdn.co/mp3-preview/1b59f143f4f09a1059e78690080c3f21e512ca24?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "Una Canción de Amor para La Pulga",
+        "id": "773PYkiPCYQOYIXeaROEyv",
+        "duration_ms": 170301,
+        "url_song": "https://p.scdn.co/mp3-preview/0ea1e0c43b00b7f00366df2e4c6f99b79aa4b622?cid=ef93c1139a084b05b496c4c209d98afc"
+      },
+      {
+        "name": "La Boda",
+        "id": "4vj6sWvmBLMhoF8AWQSeHX",
+        "duration_ms": 249884,
+        "url_song": "https://p.scdn.co/mp3-preview/01d0fb7fbbcac9c64a2b2805e46804ed5a5d3808?cid=ef93c1139a084b05b496c4c209d98afc"
+      }
+    ]
+  }
+]

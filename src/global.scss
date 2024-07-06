@@ -1,0 +1,161 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+ion-input {
+  outline: none;
+  color: green;
+}
+
+input {
+  outline-style: none;
+}
+
+input:focus {
+  outline-style: none;
+  border: none;
+}
+
+ion-tab-button {
+  --ripple-color: #69bb7b;
+  --color-selected: #69bb7b;
+  --color-focused: #69bb7b;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+ion-content::webkit-scrollbar {
+  display: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+* {
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.custom-loader-songs {
+  --background: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ) !important; /* Cambia el color y la opacidad según necesites */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #69bb7b;
+}
+
+.text-container-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%; /* Ajusta esto según el tamaño de tu contenedor */
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%; /* Empieza fuera del contenedor */
+  animation: marquee 10s linear infinite; /* Ajusta la duración según necesites */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%); /* Mueve el texto completamente fuera del contenedor */
+  }
+}
+
+
+.custom-gradient2 {
+  background-image: linear-gradient(
+    to bottom, 
+    #0ea5e9 0%, 
+    #f472b6 50%,
+    #000000 60% /* to-black, comienza justo en el 75% */
+  );
+}
+
+.ion-page {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ion-page-invisible{
+  opacity: 100% !important;
+}

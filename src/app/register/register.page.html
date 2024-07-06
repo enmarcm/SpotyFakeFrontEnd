@@ -1,0 +1,74 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black flex flex-col h-full p-8">
+    <ion-grid class="flex flex-col justify-start gap-8 py-6 min-h-screen">
+      <ion-row>
+        <label class="font-extrabold text-xl">Nombre de usuario</label>
+        <ion-input
+          placeholder="enmarcm"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          [(ngModel)]="userName"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <label class="font-extrabold text-xl">Email</label>
+        <ion-input
+          placeholder="theenmanuel123@gmail.com"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          type="email"
+          [(ngModel)]="email"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <label class="font-extrabold text-xl">Contraseña</label>
+        <ion-input
+          type="password"
+          placeholder="NeverGonnaGiveYouUp"
+          class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+          color="success"
+          [(ngModel)]="password"
+        >
+          <ion-input-password-toggle
+            slot="end"
+            color="success"
+            class="border-transparent outline-none"
+          ></ion-input-password-toggle>
+        </ion-input>
+      </ion-row>
+
+      <ion-row class="flex justify-between">
+        <label class="font-extrabold text-xl">Fecha de nacimiento</label>
+
+        <ion-datetime-button datetime="datetime" color="dark"></ion-datetime-button>
+
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime
+              id="datetime"
+              presentation="date"
+              [(ngModel)]="dateOfBirth"
+              color="success"
+            ></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-row>
+
+      <ion-row>
+        <ion-button
+          shape="round"
+          color="success"
+          class="mx-auto"
+          (click)="register()"
+        >
+          <span class="text-white font-bold text-md">Registrar usuario</span>
+        </ion-button>
+      </ion-row>
+
+
+      
+    </ion-grid>
+  </div>
+</ion-content>

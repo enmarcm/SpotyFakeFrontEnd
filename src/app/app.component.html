@@ -1,0 +1,13 @@
+<ion-app class="min-h-screen">
+  @if(shouldRenderMenu){
+    <app-navbar class="z-20"></app-navbar>
+    <app-music-player class="z-10 fixed py-2 min-w-full min-h-16 top-[83%] "></app-music-player>
+    
+  }
+  
+  @if(realLoading){
+    <app-loader class="z-50 backdrop-blur h-full w-full"></app-loader>
+  } 
+
+  <ion-router-outlet class="min-h-screen"></ion-router-outlet>
+</ion-app>

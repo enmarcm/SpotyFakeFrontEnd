@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>artist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black">
+    <ion-grid class="min-h-screen p-0 m-0">
+      <ion-row class="h-[30%] w-full m-0 p-0">
+        <ion-col size="12" class="flex justify-center items-center">
+          <div
+            class="relative flex justify-center items-center object-cover w-full m-0 p-0"
+          >
+            <ion-img
+              [src]="urlImage"
+              class="object-cover shadow-lg w-full p-0 m-0"
+            ></ion-img>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+            <div
+              class="absolute bottom-0 left-0 text-start flex flex-col items-start justify-start p-4"
+            >
+              <h2 class="font-black text-white text-4xl text-start">
+                {{name}}
+              </h2>
+              <div class="flex flex-col justify-start items-start">
+                @for(genre of genres; track genre){
+                <h3 class="text-sm text-gray-300">{{genre}}</h3>
+                }
+              </div>
+              <h3><span class="font-bold">Followers </span> {{followers}}</h3>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="h-[20%] mt-4">
+        <ion-card class="w-full">
+          <ion-card-header>
+            <ion-card-title>Canciones populares</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              @for(song of songs; track song.id){
+              <ion-item
+                [id]="song.id"
+                class="flex items-center justify-start flex-col"
+                (click)="goToSong(song.id)"
+              >
+                <ion-thumbnail slot="start">
+                  <img
+                    [src]="song.urlImage"
+                    class="object-cover rounded-md shadow-md"
+                  />
+                </ion-thumbnail>
+                <ion-label>{{song.name}}</ion-label>
+              </ion-item>
+              }
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+      <ion-row class="h-[20%] mt-4">
+        <ion-card class="w-full">
+          <ion-card-header>
+            <ion-card-title>Albums</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              @for(album of albums; track album.id){
+              <ion-item
+                [id]="album.id"
+                class="flex items-center justify-start flex-col"
+                (click)="goToAlbum(album.id)"
+              >
+                <ion-thumbnail slot="start">
+                  <img
+                    [src]="album.urlImage"
+                    class="object-cover rounded-md shadow-md"
+                  />
+                </ion-thumbnail>
+                <ion-label>{{album.name}}</ion-label>
+              </ion-item>
+              }
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

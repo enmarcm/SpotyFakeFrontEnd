@@ -1,0 +1,35 @@
+<ion-card
+  [id]="idSong"
+  class="bg-transparent hover:bg-gray-900 h-max"
+  (click)="goToRoute()"
+>
+  <ion-img
+    alt="Silhouette of mountains"
+    [src]="urlImage"
+    class="w-full"
+  ></ion-img>
+
+  <ion-card-header class="bg-transparent grow flex flex-col ">
+    <ion-card-title class="text-md font-bold text-white">{{
+      songName
+    }}</ion-card-title>
+
+    <div class="flex flex-col mt-2">
+      @for(artist of artistName; track artist; let index = $index){ @if(index <=
+      1){
+      <ion-card-subtitle
+        class="text-sm text-gray-300 text-nowrap w-full whitespace-nowrap"
+        >{{ artist }}
+      </ion-card-subtitle>
+      } @else{ 
+        @if(index == 2){
+      <ion-card-subtitle
+        class="text-sm text-gray-300 text-nowrap w-full whitespace-nowrap"
+        >...</ion-card-subtitle
+      >}
+         } }
+    </div>
+  </ion-card-header>
+
+</ion-card>
+

@@ -1,0 +1,87 @@
+ion-footer {
+    background-color: #181818; // Dark background for the footer
+    ion-toolbar {
+      --background: #282828; // Slightly lighter shade for the toolbar
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      z-index: 1000;
+      position: relative;
+  
+      ion-buttons {
+        ion-button {
+        //   --ripple-color: transparent; // Removes ripple effect to keep UI clean
+  
+          ion-icon {
+            color: #fff; // White icons
+            size: 24px;
+          }
+        }
+      }
+  
+      .track-info {
+        color: #fff;
+        font-size: 0.9rem;
+        span {
+          display: block; // Ensures text is on its own line
+        }
+      }
+  
+      ion-range {
+        --bar-background-active: #1db954; // Spotify green for the active part of the slider
+        --bar-background: #535353; // Darker shade for the inactive part of the slider
+        --knob-background: #fff; // White knob
+  
+        ion-icon {
+          color: #1db954; // Spotify green for the musical notes icon
+        }
+      }
+  
+      .time-info {
+        color: #fff;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+      }
+      .progress-container {
+        width: 100%; /* Ensure the container spans the full width */
+        position: absolute; /* Positioning it absolutely to ensure it stays at the bottom */
+        bottom: 0; /* Align to the bottom */
+        left: 0; /* Align to the left */
+      }
+      
+      #audioProgress {
+        width: 100%; /* Full width to span the container */
+        height: 2px; /* Make it really thin */
+        -webkit-appearance: none; /* Necessary for styling */
+        appearance: none;
+      }
+      #audioProgress::-webkit-progress-bar {
+        color: #ccc; /* Background of the progress bar */
+      }
+
+      #audioProgress::-webkit-progress-value {
+        background-color: white; /* Make the advancing part white */
+      }
+    }
+  }
+
+  ion-modal {
+    #audioProgressModal {
+      width: 100%; /* Full width to span the container */
+      height: 2px; /* Make it really thin */
+      -webkit-appearance: none; /* Necessary for styling */
+      appearance: none;
+    }
+    #audioProgressModal::-webkit-progress-bar {
+      color: #ccc; /* Background of the progress bar */
+    }
+
+    #audioProgressModal::-webkit-progress-value {
+      background-color: white; /* Make the advancing part white */
+    }
+  }
+
+  /* For WebKit browsers like Chrome and Safari */

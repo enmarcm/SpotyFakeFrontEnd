@@ -1,0 +1,203 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PLaylists</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="bg-gradient-to-b from-gray-900 to-black">
+    <ion-grid [fixed]="true" class="min-h-screen">
+      <!-- TITULO -->
+      <ion-row class="min-h-[20%]">
+        <ion-col size="8" class="flex justify-center items-center">
+          <h1 class="text-center text-3xl font-sans text-white font-semibold">
+            Tus playlists
+          </h1>
+        </ion-col>
+
+        <ion-col size="4" class="flex flex-col justify-center items-center">
+          <ion-button fill="clear" (click)="setOpen(true)">
+            <ion-icon
+              name="add-circle-outline"
+              color="dark"
+              size="large"
+            ></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <!-- LIKES -> Esto es estatico -->
+      <ion-row class="my-3">
+        <ion-card class="flex w-full py-2 px-4" (click)="goToLikes()">
+          <div class="w-16 flex justify-center items-center">
+            <ion-img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/card-media.png"
+              class="w-full h-full aspect-1 object-cover rounded-lg"
+            />
+          </div>
+
+          <ion-card-header
+            class="w-full flex justify-start items-start text-start"
+          >
+            <ion-card-title class="text-sm text-start"
+              >Tus likes❤️</ion-card-title
+            >
+          </ion-card-header>
+        </ion-card>
+      </ion-row>
+
+      <!--Playlist, esto si carga dinamicamente -->
+      <ion-list class="h-full w-full">
+        @for(playlist of playlists; track playlist.id){
+        <ion-item-sliding>
+          <ion-item
+            class="my-1 px-1 hover:cursor-pointer hover:opacity-45"
+            (click)="goToPlaylist(playlist.id)"
+          >
+            <ion-avatar slot="start">
+              <ion-img [src]="imageBase" loading="lazy"></ion-img>
+            </ion-avatar>
+
+            <ion-label>
+              <span class="text-start font-bold font-sans"
+                >{{ playlist.name.toUpperCase() }}</span
+              >
+            </ion-label>
+
+            <ion-label class="text-end">
+              <span class="text-end text-gray-600 text-sm font-sans font-light">
+                {{ (playlist.idSongs.length > 1 || playlist.idSongs.length ==
+                0)? playlist.idSongs.length + ' canciones' :
+                playlist.idSongs.length + ' canción' }}
+              </span>
+            </ion-label>
+          </ion-item>
+
+          <ion-item-options side="end" class="mx-1">
+            <ion-item-option
+              (click)="deletePlaylist(playlist.id)"
+              color="success"
+              class="rounded-lg shadow-lg m-1 w-20"
+            >
+              <span class="text-center font-semibold font-sans text-black"
+                >Editar</span
+              >
+            </ion-item-option>
+
+            <ion-item-option
+              (click)="deletePlaylist(playlist.id)"
+              color="light"
+              class="rounded-lg shadow-lg m-1 w-20"
+            >
+              <span class="text-center font-semibold font-sans text-white"
+                >Borrar</span
+              >
+            </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        }
+      </ion-list>
+    </ion-grid>
+  </div>
+
+  <!-- ! Este es para crear playlist -->
+  <!--TODO: Cambiar esto al componente -->
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <!-- Cabecera modal -->
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancelar</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">CREAR</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <!-- Aqui ira el contenido dentro del modal -->
+      <ion-content>
+        <ion-grid class="flex flex-col justify-start gap-8 p-6">
+          <!-- Nombre de la playlist -->
+          <ion-row>
+            <ion-col size="12">
+              <ion-input
+                label="Nombre de la playlist"
+                label-placement="floating"
+                class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+                placeholder="Éxitos musicales"
+                color="success"
+                [(ngModel)]="newPlaylist.playListname"
+                name="playListname"
+                
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Descripcion de la playlist -->
+          <ion-row>
+            <ion-col>
+              <ion-textarea
+                label="Descripción de la playlist"
+                labelPlacement="floating"
+                counter="true"
+                maxlength="60"
+                color="success"
+                class="bg-transparent border-transparent bg-gray-800 placeholder-black outline-none"
+                [(ngModel)]="newPlaylist.description"
+                name="description"
+              ></ion-textarea>
+            </ion-col>
+          </ion-row>
+
+          <!-- Seleccion de las cancionesp -->
+          <ion-row>
+            <ion-list [inset]="true" class="w-full">
+              <ion-item
+                [button]="true"
+                [detail]="false"
+                id="select-fruits"
+                (click)="isModalOptions = true"
+                class="w-full"
+              >
+                <ion-label>Canciones</ion-label>
+                <div slot="end" id="selected-fruits">
+                  {{ selectedSongsText }}
+                </div>
+              </ion-item>
+            </ion-list>
+
+            <!-- TODO: ESTO TAMBIEN CAMBIAR A COMPONENTE XD -->
+            <ion-modal [isOpen]="isModalOptions" #modal>
+              <ng-template>
+                <app-typehead
+                  class="ion-page"
+                  title="Canciones"
+                  [items]="songs"
+                  [selectedItems]="selectedSongs"
+                  (selectionChange)="selectionChange($event)"
+                  [searchSongs]="obtainSongByName"
+                  (selectionCancel)="modal.dismiss()"
+                  (updatedItems)="updateSelectedItems($event)"
+                ></app-typehead>
+              </ng-template>
+            </ion-modal>
+          </ion-row>
+
+          <ion-row>
+            <ion-button
+              shape="round"
+              color="success"
+              class="mx-auto"
+              (click)="confirm()"
+            >
+              <span class="text-white font-bold text-md">Crear Playlist</span>
+            </ion-button>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

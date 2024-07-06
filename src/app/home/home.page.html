@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="bg-black">
+    <ion-grid class="min-h-screen overflow-y-auto p-5" [fixed]="true">
+      <!-- Canciones -->
+      <ion-row class="h-[5%]">
+        <ion-col size="12">
+          <ion-text>
+            <h2 class="text-white font-extrabold text-2xl text-start">
+              Ultimas canciones
+            </h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="overflow-x-scroll flex-nowrap min-h-48 h-[15%]">
+        @for(song of songs; track song._id){
+        <ion-col size="7">
+          <item-card
+            [songName]="song.name"
+            [artistName]="song.artistNames"
+            [urlImage]="song.urlImage"
+            [idSong]="song._id"
+            class="h-full"
+            redirectTo="/song"
+          />
+        </ion-col>
+        }
+      </ion-row>
+
+      <!-- Artistas -->
+      <ion-row class="h-[5%]">
+        <ion-col size="12">
+          <ion-text>
+            <h2 class="text-white font-extrabold text-2xl text-start">
+              Artistas del momento
+            </h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="overflow-x-scroll flex-nowrap min-h-48 h-[15%]">
+        @for(artist of artists; track artist.id){
+        <ion-col size="7">
+          <item-artist
+            [urlImage]="artist.urlImage"
+            [idArtist]="artist.id"
+            class="h-full"
+            [artistName]="artist.name"
+            redirectTo="/artist"
+          />
+        </ion-col>
+        }
+      </ion-row>
+
+      <!-- Albunes -->
+      <ion-row class="h-[5%]">
+        <ion-col size="12">
+          <ion-text>
+            <h2 class="text-white font-extrabold text-2xl text-start">
+              Nuevos lanzamientos
+            </h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row class="overflow-x-scroll flex-nowrap min-h-48 h-[15%]">
+        @for(album of albums; track album.id){
+        <ion-col size="7">
+          <item-card
+            [songName]="album.name"
+            [urlImage]="album.urlImage"
+            [idSong]="album.id"
+            class="h-full"
+            redirectTo="/album"
+          />
+        </ion-col>
+        }
+      </ion-row>
+
+
+
+    </ion-grid>
+  </div>
+</ion-content>
