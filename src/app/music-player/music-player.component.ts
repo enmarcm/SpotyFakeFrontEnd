@@ -54,7 +54,7 @@ export class MusicPlayerComponent implements OnInit {
   showArtistsOut: boolean = false;
   currentTrack: any;
   isAlbum: boolean; // Add this property
-  currentSong: string; // Add this property
+  // currentSong: string; // Add this property
   nextTrack: { name: string };
   constructor(
     private musicPlayerService: MusicPlayerService,
@@ -64,7 +64,8 @@ export class MusicPlayerComponent implements OnInit {
     addIcons({ play, pause });
      this.nextTrack = { name: '' };
     this.isAlbum = false; // Initialize this property
-    this.currentSong = ''; // Initialize this property
+    // this.currentSong = {name: ""}; // Initialize this property
+    this.currentTrack = { name: '' }; // Initialize this property
   }
   
   isShow() {
@@ -114,7 +115,7 @@ export class MusicPlayerComponent implements OnInit {
       this.nextTrack = this.musicPlayerService.getNextTrack();
       console.log('Current Track:', this.currentTrack); // Debugging line
       this.isAlbum = true; // Assuming track has an albumIdproperty
-      this.currentSong = track.name; 
+      // this.currentSong = track.name; 
     });
 
 
