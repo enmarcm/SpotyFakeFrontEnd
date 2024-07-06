@@ -100,6 +100,7 @@ export class AlbumPage implements OnInit {
   async playAlbum() {
     this.musicPlayerService.setPlaylist(this.songs);
     console.log('Playing Album:', this.songs); // Debugging line
+    this.sharedDataService.changeUrlSong(this.songs[0].url_song);
     this.musicPlayerService.play(this.songs[0].url_song);
       this.sharedDataService.changeSongName(this.songs[0].name);
       this.sharedDataService.changeArtists(this.artists);

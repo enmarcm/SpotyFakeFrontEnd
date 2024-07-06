@@ -140,6 +140,7 @@ export class PlaylistItemPage implements OnInit {
 
   async playPlaylist() {
     this.musicPlayerService.setPlaylist(this.PlaylistItem.songs);
+    this.sharedDataService.changeUrlSong(this.PlaylistItem.songs[0].urlSong);
     this.musicPlayerService.play(this.PlaylistItem.songs[0].urlSong);
     this.sharedDataService.changeArtistsOut(this.PlaylistItem.songs[0].artistNames);
     this.sharedDataService.changeSongName(this.PlaylistItem.songs[0].name);

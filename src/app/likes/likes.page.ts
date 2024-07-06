@@ -86,6 +86,7 @@ export class LikesPage implements OnInit {
 
   async playLikes() {
     this.musicPlayerService.setPlaylist(this.songs);
+    this.sharedDataService.changeUrlSong(this.songs[0].urlSong);
     this.musicPlayerService.play(this.songs[0].urlSong);
     this.sharedDataService.changeArtistsOut(this.songs[0].artistNames);
     this.sharedDataService.changeSongName(this.songs[0].name);
